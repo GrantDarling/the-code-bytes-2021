@@ -1,0 +1,56 @@
+@import 'Abstracts/_theme-header';
+
+// TO BE REMOVED
+div#ss-floating-bar {
+  display: none;
+}
+
+
+.review-snippet {
+  border: solid 1px lightgrey;
+  padding: 20px 30px;
+}
+
+.review-snippet .content-container {
+	display:flex;
+	height: 140px;
+}
+
+.review-snippet img {
+    width: auto !important;
+    margin-right: 15px;
+}
+
+.review-snippet h3 {
+	margin-top: 0;
+}
+/* VENDORS */
+@import 'Vendors/bourbon/bourbon';
+
+/* Abstract */
+@import 'Abstracts/mixins';
+@import 'Abstracts/variables';
+@import 'Abstracts/fonts';
+
+/* Base */
+@import 'Base/accessibility';
+@import 'Base/normalize';
+@import 'Base/base';
+
+/* Layout */
+@import 'Layouts/header';
+@import 'Layouts/footer';
+
+/* Components */
+@import 'Components/buttons';
+@import 'Components/promotional';
+@import 'Components/comments';
+@import 'Components/_categories';
+
+/* Pages */
+@import 'Pages/_home';
+@import 'Pages/_single';
+@import 'Pages/_about';
+@import 'Pages/_search';
+
+@import 'shame';

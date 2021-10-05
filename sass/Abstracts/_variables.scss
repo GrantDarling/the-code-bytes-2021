@@ -1,0 +1,50 @@
+/****************
+    VARIABLES
+****************/
+
+// Colors
+$white: #ffffff;
+$white-alabaster: #fafafa;
+$white-mercury: #e3e3e3;
+$grey-dust: #9b9999;
+$grey-cod: #1d1d1d;
+$black-mine-shaft: #343434;
+$black: black;
+
+$orange-geraldine: #f89e86;
+$success-green: #59c371;
+
+// Primary Colors
+$CB-BLACK: $black-mine-shaft;
+$CB-ACCENT: $orange-geraldine;
+
+// Based
+$body-color: $grey-cod;
+$max-width: 1500px;
+$header-padding: 280px;
+
+// Font Families
+$primary-font: 'PT Sans', sans-serif;
+$accent-font: 'OCRA', sans-serif;
+
+// Font Weights
+$bold: 700;
+$normal: 400;
+
+// Header
+$HEADER__bg-color: $white-alabaster;
+$HEADER__shadow: #d3d2d2;
+$HEADER__menu-height: 75px;
+$HEADER__mobile-menu-top: 180px;
+$HEADER__mobile-menu-open: $HEADER__mobile-menu-top + $HEADER__menu-height;
+
+// Media Query Breakpoints
+$breakpoints: (
+  'x-small': 400px,
+  'small': 375px,
+  'small-medium': 560px,
+  'medium': 767px,
+  'medium-large': 992px,
+  'large': 1248px,
+  'x-large': 1440px
+);

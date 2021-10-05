@@ -1,0 +1,93 @@
+/****************
+     MIXINS
+****************/
+
+// Flex Center : @include flex-center();
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Flex Align : @include flex-align(flex-end, stretch);
+@mixin flex-align($horizontal, $vertical) {
+  display: flex;
+  justify-content: $horizontal;
+  align-items: $vertical;
+}
+
+// Box shadows : @include box-shadow(5px 10px $black)
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  -ms-box-shadow: $shadow;
+  -o-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+// User Select : @include user-select(none)
+@mixin user-select($select) {
+  -webkit-user-select: $select;
+  -khtml-user-select: $select;
+  -moz-user-select: $select;
+  -ms-user-select: $select;
+  user-select: $select;
+}
+
+// Border Radius : @include border-radius(3px)
+@mixin border-radius($radius: $border-radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// Animations : @include animation(animation-name 5s linear 2s infinite alternate);
+@mixin animation($animation...) {
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  -o-animation: $animation;
+  animation: $animation;
+}
+
+// Keyframes : @include keyframes(keyframe-name) { @content }
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+// Display Box : @include box(25px)
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin media($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+
+    @if $type == max {
+      $width: $width - 1px;
+    }
+  }
+
+  @media only screen and (#{$type}-width: $width) {
+    @content;
+  }
+}

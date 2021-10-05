@@ -1,0 +1,93 @@
+/****************
+      BASE
+****************/
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+main {
+  width: 100%;
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: $primary-font;
+}
+
+body {
+  background-color: $body-color;
+}
+
+main {
+  background-color: $white;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 4%;
+}
+
+iframe {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.entry-content {
+  height: 100vh;
+}
+
+.page-header,
+.page-title {
+  font-size: 20px;
+  text-align: center;
+  font-family: $accent-font;
+  margin-bottom: 40px;
+  max-width: $max-width;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+
+}
+
+p {
+	font-size: 18px;
+}
+
+table {
+	width: 90%;
+	
+	&, 
+	td {
+		border: solid 1px $CB-BLACK;
+	}
+
+	th {
+		background: $CB-BLACK;
+		color: $white;
+	}
+}
+
+@include media('medium') {
+  .page-header,
+  .page-title {
+    font-size: 36px;
+    text-align: center;
+    font-family: $accent-font;
+  }
+}
