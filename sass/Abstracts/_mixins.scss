@@ -41,6 +41,11 @@
   border-radius: $radius;
 }
 
+// Default Border : @include border($white);
+@mixin border($color: $grey-alto) {
+  border: solid 1px $color;
+}
+
 // Animations : @include animation(animation-name 5s linear 2s infinite alternate);
 @mixin animation($animation...) {
   -webkit-animation: $animation;
