@@ -20,24 +20,23 @@ div#ss-floating-bar {
   display: none;
 }
 
-
 .review-snippet {
   border: solid 1px lightgrey;
   padding: 20px 30px;
 }
 
 .review-snippet .content-container {
-	display:flex;
-	height: 140px;
+  display: flex;
+  height: 140px;
 }
 
 .review-snippet img {
-    width: auto !important;
-    margin-right: 15px;
+  width: auto !important;
+  margin-right: 15px;
 }
 
 .review-snippet h3 {
-	margin-top: 0;
+  margin-top: 0;
 }
 
 /* VENDORS */
@@ -47,6 +46,9 @@ div#ss-floating-bar {
 ****************/
 /****************
     VARIABLES
+****************/
+/****************
+      FONTS
 ****************/
 @font-face {
   font-family: 'OCRA';
@@ -1556,7 +1558,6 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
   .article #sidebar-2 {
     display: flex;
     width: 25%;
-        height: 100%;
   }
 }
 
@@ -1782,7 +1783,3 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
      SHAME
 ****************/
 /*# sourceMappingURL=style.css.map */
-
-.review-snippet {
-	
-}
