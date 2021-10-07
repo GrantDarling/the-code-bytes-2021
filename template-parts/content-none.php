@@ -9,18 +9,19 @@
 
 ?>
 
+<!-- Page Header -->
 <section class="no-results not-found">
 	<header class="page-header">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'the-code-bytes-2021' ); ?></h1>
-	</header><!-- .page-header -->
+	</header>
 
+	<!-- Content -->
 	<div class="page-content">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) :
 
 			printf(
 				'<p>' . wp_kses(
-					/* translators: 1: link to WP admin new post page. */
 					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'the-code-bytes-2021' ),
 					array(
 						'a' => array(
@@ -31,21 +32,15 @@
 				esc_url( admin_url( 'post-new.php' ) )
 			);
 
-		elseif ( is_search() ) :
+		elseif ( is_search() ) : // Search Term Not Found.
 			?>
-
 			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'the-code-bytes-2021' ); ?></p>
-			<?php
-			get_search_form();
-
-		else :
+			<?php get_search_form();
+		else : // Page Not Found.
 			?>
-
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'the-code-bytes-2021' ); ?></p>
-			<?php
-			get_search_form();
-
+			<?php get_search_form();
 		endif;
 		?>
-	</div><!-- .page-content -->
-</section><!-- .no-results -->
+	</div>
+</section>
