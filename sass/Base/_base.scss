@@ -10,7 +10,6 @@ html,
 body,
 main {
   width: 100%;
-	overflow-x: hidden;
 }
 
 h1,
@@ -43,6 +42,29 @@ iframe {
   width: 100%;
 }
 
+a {
+  color: $white;
+  text-decoration: none;
+}
+
+p {
+  font-size: 18px;
+}
+
+table {
+  width: 90%;
+
+  &,
+  td {
+    border: solid 1px $CB-BLACK;
+  }
+
+  th {
+    background: $CB-BLACK;
+    color: $white;
+  }
+}
+
 .entry-content {
   height: 100vh;
 }
@@ -57,30 +79,6 @@ iframe {
   width: 100%;
   box-sizing: border-box;
   padding: 0 20px;
-}
-
-a {
-	color: white;
-	text-decoration: none;
-
-}
-
-p {
-	font-size: 18px;
-}
-
-table {
-	width: 90%;
-	
-	&, 
-	td {
-		border: solid 1px $CB-BLACK;
-	}
-
-	th {
-		background: $CB-BLACK;
-		color: $white;
-	}
 }
 
 @include media('medium') {

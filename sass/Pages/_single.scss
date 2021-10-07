@@ -3,7 +3,7 @@
 ****************/
 
 .article {
-	width: 90%;
+  width: 90%;
 
   article {
     display: flex;
@@ -40,8 +40,8 @@
       img {
         @include box(45px);
         border-radius: 100%;
-				float: left;
-				margin-right: 20px;
+        float: left;
+        margin-right: 20px;
       }
     }
 
@@ -55,7 +55,7 @@
 
   #sidebar-1,
   #sidebar-2 {
-    width: 0;
+    display: none;
   }
 }
 
@@ -65,8 +65,8 @@
 
     article {
       max-width: 700px;
-			border: solid 1px $white-mercury;
-			border-bottom: none;
+      border: solid 1px $white-mercury;
+      border-bottom: none;
     }
 
     #sidebar-1,
@@ -83,38 +83,37 @@
 
 .nav-next,
 .nav-previous {
-	background: $white;  
-	border: solid 1px $grey-dust;
-	box-shadow: 0px 1px 8px $white-mercury;
-	padding: 20px;
-	margin: 10px;
-	width: 80%;
+  background: $white;
+  border: solid 1px $grey-dust;
+  box-shadow: 0px 1px 8px $white-mercury;
+  padding: 20px;
+  margin: 10px;
+  width: 80%;
 
-	&:hover {
-		border: solid 1px $CB-ACCENT;
-	}
+  &:hover {
+    border: solid 1px $CB-ACCENT;
+  }
 }
 
 .post-navigation {
-	.nav-links {
-		box-sizing: border-box;
-		max-width: 71%;
-		margin: auto;
-		margin-top: 50px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: left;
-		border: none;
-		box-shadow: none;
-		display: block;
+  .nav-links {
+    box-sizing: border-box;
+    max-width: 71%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    border: none;
+    box-shadow: none;
+    display: block;
 
-		a {
-			padding: 0;
-		}
-	}
+    a {
+      padding: 0;
+    }
+  }
 }
-
 
 .gist {
   font-size: 16px;
@@ -126,17 +125,15 @@
 }
 
 @include media('medium-large') {
+  .post-navigation {
+    .nav-links {
+      display: inline-block;
 
-.post-navigation {
-	.nav-links {
-		display: inline-block;
-
-		.nav-next, 
-		.nav-previous {
-			width: 40%;
-			display: inherit;
-		}
-	}
-}
-
+      .nav-next,
+      .nav-previous {
+        width: 40%;
+        display: inherit;
+      }
+    }
+  }
 }

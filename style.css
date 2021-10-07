@@ -454,24 +454,8 @@ iframe {
   width: 100%;
 }
 
-.entry-content {
-  height: 100vh;
-}
-
-.page-header,
-.page-title {
-  font-size: 20px;
-  text-align: center;
-  font-family: "OCRA", sans-serif;
-  margin-bottom: 40px;
-  max-width: 1500px;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 20px;
-}
-
 a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -491,6 +475,22 @@ table td {
 table th {
   background: #343434;
   color: #ffffff;
+}
+
+.entry-content {
+  height: 100vh;
+}
+
+.page-header,
+.page-title {
+  font-size: 20px;
+  text-align: center;
+  font-family: "OCRA", sans-serif;
+  margin-bottom: 40px;
+  max-width: 1500px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
 }
 
 @media only screen and (min-width: 767px) {
