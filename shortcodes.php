@@ -61,6 +61,10 @@ function posts_function($atts){
    return $return_string;
 }
 
+/**
+ * Call Shortcodes
+ */
+
 add_shortcode('review', 'review_function');
 add_shortcode('posts', 'posts_function');
 

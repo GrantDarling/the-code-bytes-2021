@@ -17,15 +17,13 @@ get_header();
 				the_post();
 
 
-				echo '<div class="article">';
-					echo '<section id="sidebar-1" class="sidebar"></section>';
-
-
-				get_template_part( 'template-parts/content-single', get_post_type() );
-
-					
-					get_sidebar();
-				echo '</div>';
+				echo 
+				'<div class="article">'.
+					'<section id="sidebar-1" class="sidebar"></section>'; 
+						get_template_part( 'template-parts/content-single', get_post_type() );
+						get_sidebar();
+				echo 
+				'</div>';
 
 				the_post_navigation(
 					array(
@@ -34,16 +32,12 @@ get_header();
 					)
 				);
 
-				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
 					comments_template();
 				endif;
 
-			endwhile; // End of the loop.
-			?><!-- .entry-content -->
-
-
-	</main><!-- #main -->
-
+			endwhile;
+			?>
+	</main>
 <?php
 get_footer();
