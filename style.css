@@ -1180,6 +1180,12 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
 
 .categories__article:hover .category__main {
   border: #f89e86 solid 4px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .categories__article .category__main {
