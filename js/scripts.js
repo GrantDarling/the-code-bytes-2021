@@ -1,4 +1,8 @@
-// Homepage: Browse Mores
+/*
+ * Homepage:
+ * 'Browse More' Button
+ * */
+
 const browseButton = document.querySelectorAll('.articles__browse-more');
 
 const loadMoreArticles = (event) => {
@@ -32,7 +36,11 @@ browseButton.forEach((button) => {
   button.addEventListener('click', loadMoreArticles);
 });
 
-// Header: Disable scroll
+/*
+ * Header:
+ * Disable Scroll
+ * */
+
 const toggleMenu = document.querySelector('.menu-toggle');
 
 const disableScroll = () => {
@@ -47,7 +55,11 @@ const disableScroll = () => {
 
 toggleMenu.addEventListener('click', disableScroll);
 
-// Header: Check for active link
+/*
+ * Header:
+ * Check Active Link
+ * */
+
 const currentURL = window.location.href;
 let navChildren = document.querySelectorAll('.menu-item');
 
