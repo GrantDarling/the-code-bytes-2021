@@ -9,7 +9,7 @@
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
+	<!-- Header -->
 	<header>
 		<h1><?php echo get_the_title() ?> </h1>
 		<?php echo get_the_post_thumbnail() ?>
@@ -18,12 +18,13 @@
 			Written By: <?php echo get_the_author() ?> <br>
 			<?php echo get_the_date()?>
 		</div>
-	</header>		
+	</header>	
+		
 	<section class="content">
 		<?php the_content() ?>
-
 	</section>
 
-<footer class="entry-footer">
-		</footer><!-- .entry-footer -->
-	</article><!-- #post-<?php the_ID(); ?> -->
+	<footer class="entry-footer"></footer>
+</article>
+
+<?php the_ID(); ?>
