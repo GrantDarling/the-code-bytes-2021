@@ -42,7 +42,7 @@
 }
 
 // Default Border : @include border($white);
-@mixin border($color: $grey-alto) {
+@mixin border($color: $white-mercury) {
   border: solid 1px $color;
 }
 

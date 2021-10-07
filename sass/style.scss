@@ -5,31 +5,30 @@ div#ss-floating-bar {
   display: none;
 }
 
-
 .review-snippet {
   border: solid 1px lightgrey;
   padding: 20px 30px;
 }
 
 .review-snippet .content-container {
-	display:flex;
-	height: 140px;
+  display: flex;
+  height: 140px;
 }
 
 .review-snippet img {
-    width: auto !important;
-    margin-right: 15px;
+  width: auto !important;
+  margin-right: 15px;
 }
 
 .review-snippet h3 {
-	margin-top: 0;
+  margin-top: 0;
 }
 /* VENDORS */
 @import 'Vendors/bourbon/bourbon';
 
 /* Abstract */
-@import 'Abstracts/mixins';
 @import 'Abstracts/variables';
+@import 'Abstracts/mixins';
 @import 'Abstracts/fonts';
 
 /* Base */
