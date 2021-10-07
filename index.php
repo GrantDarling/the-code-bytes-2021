@@ -26,28 +26,28 @@ get_header();
 
 		<!-- Landing Content -->
 		<section class="landing__container">
-		<h1 class="landing__title-desktop">THE CODE BYTES</h1>
-		<div class="landing__buttons">
-			<a class="scroll" href="#top-articles"> 
-				<button id="landing__button--1">
-					<svg width="180px" height="60px" preserveAspectRatio="none" class="border">
-					<polyline points="151,1 151,44.6 1,44.6 1,1 151,1" preserveAspectRatio="none" class="bg-line" />
-					<polyline points="151,1 151,44.6 1,44.6 1,1 151,1" preserveAspectRatio="none" class="hl-line" />
-					</svg>
-					<span>Top Articles</span>
-				</button>
-			</a>
-			<a class="scroll" href="#latest-articles">
-				<button id="landing__button--2">
-					<svg width="5080px" height="60px" preserveAspectRatio="none" class="border">
-					<polyline points="151,1 151,44.6 1,44.6 1,1 151,1" preserveAspectRatio="none" class="bg-line" />
-					<polyline points="151,1 151,44.6 1,44.6 1,1 151,1"  preserveAspectRatio="none"class="hl-line" />
-					</svg>
-					<span>Latest Articles</span>
-				</button>
-			</a>
-		</div>
-		<a class="landing__about" href="/about">Want to learn more?</a>
+			<h1 class="landing__title-desktop">THE CODE BYTES</h1>
+			<div class="landing__buttons">
+				<a class="scroll" href="#top-articles"> 
+					<button id="landing__button--1">
+						<svg width="180px" height="60px" preserveAspectRatio="none" class="border">
+						<polyline points="151,1 151,44.6 1,44.6 1,1 151,1" preserveAspectRatio="none" class="bg-line" />
+						<polyline points="151,1 151,44.6 1,44.6 1,1 151,1" preserveAspectRatio="none" class="hl-line" />
+						</svg>
+						<span>Top Articles</span>
+					</button>
+				</a>
+				<a class="scroll" href="#latest-articles">
+					<button id="landing__button--2">
+						<svg width="5080px" height="60px" preserveAspectRatio="none" class="border">
+						<polyline points="151,1 151,44.6 1,44.6 1,1 151,1" preserveAspectRatio="none" class="bg-line" />
+						<polyline points="151,1 151,44.6 1,44.6 1,1 151,1"  preserveAspectRatio="none"class="hl-line" />
+						</svg>
+						<span>Latest Articles</span>
+					</button>
+				</a>
+			</div>
+			<a class="landing__about" href="/about">Want to learn more?</a>
 		</section>
 
 		<!-- Top Articles -->
@@ -65,15 +65,15 @@ get_header();
 					<header>
 						<img src="https://thecodebytes.com/wp-content/uploads/2021/01/the-code-bytes-logo-2@2x.png" />
 					</header>
-					<h2> The Code Bytes Newsletter </h2>
+					<h2> The Code Bytes Newsletter</h2>
 						<p> Keep up to date. </p>
 						<?php newsletter() ?>
 				</aside>
 			</div>
 		</section>
 
-		<!-- Code Resources (Later) -->
-		<section class="code-resources__buffer"></section>
+		<!-- Filler -->
+		<div></div>
 		
 		<!-- Latest Articles -->
 		<section class="articles-promotions" id="latest-articles">
@@ -96,6 +96,6 @@ get_header();
 				</aside>
 			</div>
 		</section>
-	</main><!-- #main -->
+	</main>
 <?php
 get_footer();
