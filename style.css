@@ -454,8 +454,12 @@ iframe {
 }
 
 a {
-  color: #ffffff;
+  color: black;
   text-decoration: none;
+}
+
+a:hover {
+  color: #f89e86;
 }
 
 p {
@@ -875,7 +879,7 @@ table th {
 
 .header-shim {
   width: 100%;
-  height: 300px;
+  height: 250px;
   background: #ffffff;
 }
 
@@ -1491,6 +1495,12 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
 /****************
      SINGLE
 ****************/
+.article-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .article {
   width: 90%;
   display: flex;
@@ -1547,24 +1557,152 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
   padding: 0 20px;
 }
 
-.article #sidebar-1,
-.article #sidebar-2 {
+#sidebar-1,
+#sidebar-2 {
   display: none;
 }
 
+#sidebar-3 {
+  width: 100%;
+  border: none;
+  max-width: unset;
+}
+
+#sidebar-3 h3 {
+  text-align: left;
+}
+
+#sidebar-3 > p {
+  display: none;
+}
+
+#sidebar-3 .banner .newsletter {
+  padding: 0;
+  margin-bottom: 20px;
+  justify-content: space-around;
+}
+
+#sidebar-3 .banner .newsletter header {
+  width: 100%;
+  max-width: 100px;
+  border: none;
+}
+
+#sidebar-3 .banner .newsletter header img {
+  width: 100%;
+  height: auto;
+}
+
+#sidebar-3 .banner .newsletter .body {
+  width: 40%;
+  text-align: center;
+}
+
+#sidebar-3 .banner .newsletter .promotion__button {
+  height: 40px;
+}
+
+#sidebar-3 .banner .newsletter .promotions__button {
+  width: 20%;
+}
+
+#sidebar-3 .banner .newsletter .promotions__button button,
+#sidebar-3 .banner .newsletter .promotions__p {
+  font-size: 13px;
+}
+
+.banner,
+.banner .newsletter {
+  width: 100%;
+}
+
 @media only screen and (min-width: 767px) {
+  #sidebar-3 .banner .newsletter {
+    justify-content: center;
+  }
+  #sidebar-3 .banner .newsletter h3 {
+    text-align: center;
+  }
+  #sidebar-3 .banner .promotions__button button,
+  #sidebar-3 .banner .promotions__p {
+    font-size: 16px;
+  }
+  #sidebar-2 {
+    display: initial;
+    width: 25%;
+    border: solid 1px #e3e3e3;
+    margin: 0 20px;
+  }
+  #sidebar-2 .wp-block-group__inner-container > p {
+    display: none;
+  }
+  #sidebar-2 ul {
+    padding: 0;
+    margin: 0;
+  }
+  #sidebar-2 ul li {
+    list-style: none;
+    padding: 15px 10px;
+    border: solid 1px #e3e3e3;
+  }
+  #sidebar-2 .promotions__button button,
+  #sidebar-2 .promotions__p {
+    font-size: 15px;
+  }
+  .sidebar .wp-block-column > p {
+    display: none;
+  }
+  .sidebar .wp-block-columns,
+  .sidebar .wp-block-column {
+    height: 100%;
+  }
+  .sidebar .wp-block-column {
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+  }
+  .sidebar .promotions {
+    height: 92.5%;
+  }
+  .sidebar .promotions {
+    align-items: flex-start;
+  }
+  .sidebar .promotions .newsletter {
+    width: 100%;
+    top: 210px;
+    background: #ffffff;
+    flex-grow: 1;
+  }
   .article {
     width: 90%;
   }
   .article article {
     max-width: 700px;
     border: solid 1px #e3e3e3;
-    border-bottom: none;
   }
-  .article #sidebar-1,
-  .article #sidebar-2 {
-    display: flex;
+}
+
+@media only screen and (min-width: 992px) {
+  #sidebar-1,
+  #sidebar-2,
+  .sidebar {
+    display: initial;
     width: 25%;
+    border: solid 1px #e3e3e3;
+    margin: 0 20px;
+    text-align: center;
+  }
+  #sidebar-1 {
+    border: none;
+  }
+  .widget_custom_html,
+  .custom-html-widget {
+    width: 100%;
+    height: 100%;
+  }
+  #sidebar-container {
+    position: sticky;
+    top: 120px;
   }
 }
 
@@ -1622,6 +1760,12 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
   .post-navigation .nav-links .nav-previous {
     width: 40%;
     display: inherit;
+  }
+}
+
+@media only screen and (min-width: 1248px) {
+  #sidebar-3 {
+    max-width: 700px;
   }
 }
 

@@ -9,16 +9,23 @@
 
 get_header();
 ?>
+
+
 	<main id="primary" class="site-main">
 			<?php
 				while ( have_posts() ) :
 					the_post();
+					dynamic_sidebar( 'sidebar-3' );
 					echo 
-					'<div class="article">'.
-						'<section id="sidebar-1" class="sidebar"></section>'; 
-							get_template_part( 'template-parts/content-single', get_post_type() );
-							get_sidebar();
-					echo 
+					'<div class="article-container">';
+						dynamic_sidebar( 'sidebar-2' );
+						echo
+						'<div class="article">';
+								get_template_part( 'template-parts/content-single', get_post_type() );
+						echo 
+						'</div>';
+						get_sidebar();
+					echo
 					'</div>';
 					the_post_navigation(
 						array(

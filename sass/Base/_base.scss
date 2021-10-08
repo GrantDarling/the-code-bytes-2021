@@ -43,8 +43,12 @@ iframe {
 }
 
 a {
-  color: $white;
+  color: $black;
   text-decoration: none;
+
+  &:hover {
+    color: $CB-ACCENT;
+  }
 }
 
 p {

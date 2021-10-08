@@ -51,5 +51,4 @@
 		</footer>
 	<?php endif; ?>
 </article>
-
 <?php the_ID(); ?>

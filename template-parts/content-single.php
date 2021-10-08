@@ -26,5 +26,3 @@
 
 	<footer class="entry-footer"></footer>
 </article>
-
-<?php the_ID(); ?>
