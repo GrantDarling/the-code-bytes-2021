@@ -1150,16 +1150,9 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
     CATEGORIES
 ****************/
 .categories__article-container {
-  padding-top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.categories__article {
-  margin: 0;
-  width: 75%;
-  margin-bottom: 40px;
 }
 
 .categories__article {
@@ -1168,9 +1161,8 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
   align-items: center;
   width: 100%;
   height: 250px;
+  margin: 25px 25px 50px;
   position: relative;
-  margin: 25px 25px 50px 25px;
-  text-decoration: none;
   color: #ffffff;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
@@ -1182,23 +1174,18 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
   box-shadow: none;
 }
 
-.categories__article:hover .category__main {
+.categories__article:hover .category__body {
   border: #f89e86 solid 4px;
+}
+
+.categories__article .category__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.categories__article .category__main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
+  border-radius: 4px;
   font-size: 23px;
   padding: 0 1em;
 }
@@ -1462,16 +1449,16 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
     width: 100%;
     height: 400px;
   }
-  .articles .categories__article:first-child .category__main,
-  .articles-promotions h1 .categories__article:first-child .category__main {
+  .articles .categories__article:first-child .category__body,
+  .articles-promotions h1 .categories__article:first-child .category__body {
     font-size: 36px;
   }
   .articles .categories__article:nth-child(n + 2),
   .articles-promotions h1 .categories__article:nth-child(n + 2) {
     width: 48%;
   }
-  .articles .categories__article .category__main,
-  .articles-promotions h1 .categories__article .category__main {
+  .articles .categories__article .category__body,
+  .articles-promotions h1 .categories__article .category__body {
     border-radius: 0;
   }
   .articles .categories__article .articles__buttons,

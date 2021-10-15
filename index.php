@@ -92,7 +92,7 @@ get_header();
 					</header>
 					<h2> Host with Digital Ocean </h2>
 						<p class="promotions__p"> $100 Free Credit </p>
-						<a class="promotions__button" target="_blank" href="https://m.do.co/c/398f3c7d3090"><button >Signup</button></a>
+						<a class="promotions__button" target="_blank" href="https://www.digitalocean.com/?refcode=398f3c7d3090&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><button >Signup</button></a>
 				</aside>
 			</div>
 		</section>

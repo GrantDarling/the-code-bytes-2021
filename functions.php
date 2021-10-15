@@ -218,7 +218,7 @@ function getArticlesByTag($tagName, $postsPerPage, $articleType) {
 				$the_query->the_post();
 				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
 
-				echo '<a class="categories__article" data-article=' . $articleType . ' href="' . get_permalink() . '"><div class="category__main" style="background: linear-gradient(158deg, rgb(14 14 14 / 71%) 0%, rgb(0 0 0) 100%),  url( ' . $featured_img_url . ') center center no-repeat;width: 100%; height: 100%;text-align: center;display: flex;
+				echo '<a class="categories__article" data-article=' . $articleType . ' href="' . get_permalink() . '"><div class="category__body" style="background: linear-gradient(158deg, rgb(14 14 14 / 71%) 0%, rgb(0 0 0) 100%),  url( ' . $featured_img_url . ') center center no-repeat;width: 100%; height: 100%;text-align: center;display: flex;
     justify-content: center;
     align-items: center;">' . get_the_title() . '</div><div class="category__footer">' . get_the_date() . '</div></a>';
 			}

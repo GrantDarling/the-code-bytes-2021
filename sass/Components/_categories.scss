@@ -3,22 +3,14 @@
 ****************/
 
 .categories__article-container {
-  padding-top: 0;
   @include flex-center();
-}
-
-.categories__article {
-  margin: 0;
-  width: 75%;
-  margin-bottom: 40px;
 }
 
 .categories__article {
   @include flex-center();
   @include box(100%, 250px);
+  @include margin(25px 25px 50px 25px);
   position: relative;
-  margin: 25px 25px 50px 25px;
-  text-decoration: none;
   color: $white;
   font-family: $primary-font;
   font-weight: $bold;
@@ -28,21 +20,16 @@
   &:hover {
     box-shadow: none;
 
-    .category__main {
+    .category__body {
       border: $CB-ACCENT solid 4px;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
   }
 
-  .category__main {
+  .category__body {
     @include flex-center();
     @include box(100%);
-    border-radius: 3px;
+    text-align: center;
+    border-radius: 4px;
     font-size: 23px;
     padding: 0 1em;
   }

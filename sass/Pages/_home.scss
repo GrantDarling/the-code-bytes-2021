@@ -223,7 +223,7 @@
       &:first-child {
         @include box(100%, 400px);
 
-        .category__main {
+        .category__body {
           font-size: 36px;
         }
       }
@@ -232,7 +232,7 @@
         width: 48%;
       }
 
-      .category__main {
+      .category__body {
         border-radius: 0;
       }
 

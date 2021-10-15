@@ -14,7 +14,7 @@
 			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
 			echo 
 			'<a class="categories__article" href="' . get_permalink() . '">' . 
-				'<div class="category__main" style="' . 
+				'<div class="category__body" style="' . 
 					'background: linear-gradient(158deg, rgb(14 14 14 / 71%) 0%, rgb(0 0 0) 100%), ' . 
 					'url( ' . $featured_img_url . ') ' . 
 					'center center no-repeat;">'. get_the_title() 

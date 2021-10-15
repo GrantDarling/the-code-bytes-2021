@@ -15,7 +15,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 The Code Bytes 2021 is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 div#ss-floating-bar {
   display: none;
 }
@@ -34,7 +34,9 @@ div#ss-floating-bar {
 ****************/
 @font-face {
   font-family: 'OCRA';
-  src: url("fonts/OCRA.woff2") format("woff2"), url("fonts/OCRA.woff") format("woff"), url("fonts/OCRA.ttf") format("truetype");
+  src: url('fonts/OCRA.woff2') format('woff2'),
+    url('fonts/OCRA.woff') format('woff'),
+    url('fonts/OCRA.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -409,7 +411,7 @@ h4,
 h5,
 h6,
 p {
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
 }
 
 body {
@@ -440,7 +442,7 @@ iframe {
 .page-title {
   font-size: 20px;
   text-align: center;
-  font-family: "OCRA", sans-serif;
+  font-family: 'OCRA', sans-serif;
   margin-bottom: 40px;
   max-width: 1500px;
   width: 100%;
@@ -453,7 +455,7 @@ iframe {
   .page-title {
     font-size: 36px;
     text-align: center;
-    font-family: "OCRA", sans-serif;
+    font-family: 'OCRA', sans-serif;
   }
 }
 
@@ -546,14 +548,14 @@ iframe {
 }
 
 .main-navigation a {
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   text-decoration: none;
   display: block;
 }
 
 .main-navigation #search-form {
-  font-family: "OCRA", sans-serif;
+  font-family: 'OCRA', sans-serif;
   height: 24px;
   margin: 0 40px 0 0;
 }
@@ -597,7 +599,7 @@ iframe {
   background: #ffffff;
   border: solid 1px #9b9999;
   box-shadow: 0px 1px 8px #e3e3e3;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   color: #343434;
   text-align: center;
@@ -607,7 +609,7 @@ iframe {
 
 .nav-links a {
   font-size: 22px;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   text-decoration: none;
   color: #343434;
   padding: 1em;
@@ -615,7 +617,7 @@ iframe {
 
 /* Mobile */
 #mobile-title {
-  font-family: "OCRA", sans-serif;
+  font-family: 'OCRA', sans-serif;
   font-weight: 100;
   font-size: 16px;
 }
@@ -893,7 +895,7 @@ iframe {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   width: 100%;
   height: 40px;
   background: black;
@@ -918,14 +920,17 @@ button,
   border: solid 1px #9b9999;
   box-shadow: 0px 1px 8px #e3e3e3;
   padding: 0;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   color: #343434;
 }
 
-a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-submit {
+a button,
+a .button,
+a .newsletter form .tnp-submit,
+.newsletter form a .tnp-submit {
   font-size: 22px;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   text-decoration: none;
   color: #343434;
 }
@@ -997,7 +1002,7 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
 
 .newsletter p,
 .newsletter .tnp-field label {
-  font-family: "OCRA", sans-serif;
+  font-family: 'OCRA', sans-serif;
 }
 
 .newsletter input {
@@ -1021,7 +1026,7 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
 .newsletter form input[type='email'] {
   height: 35px;
   border: solid 1px #9b9999 !important;
-  font-family: "OCRA", sans-serif;
+  font-family: 'OCRA', sans-serif;
 }
 
 .newsletter form .tnp-privacy,
@@ -1124,7 +1129,7 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
   margin: 25px 25px 50px 25px;
   text-decoration: none;
   color: #ffffff;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   border-radius: 4px;
   box-shadow: 5px -1px 6px #d3d2d2;
@@ -1134,11 +1139,11 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
   box-shadow: none;
 }
 
-.categories__article:hover .category__main {
+.categories__article:hover .category__body {
   border: #f89e86 solid 4px;
 }
 
-.categories__article .category__main {
+.categories__article .category__body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1159,8 +1164,12 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
   align-items: center;
   width: 100%;
   height: 35px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.601278) 45%);
-  font-family: "OCRA", sans-serif;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.601278) 45%
+  );
+  font-family: 'OCRA', sans-serif;
   font-size: 12px;
   border-top: solid 1px #ffffff40;
 }
@@ -1257,7 +1266,7 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
 }
 
 .landing__about {
-  font-family: "OCRA", sans-serif;
+  font-family: 'OCRA', sans-serif;
   font-size: 12px;
   color: #343434;
 }
@@ -1289,7 +1298,7 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
     max-width: 1500px;
   }
   .landing__banner .landing__tagline {
-    font-family: "OCRA", sans-serif;
+    font-family: 'OCRA', sans-serif;
     font-size: 9.5px;
   }
   .landing__banner .landing__tagline span {
@@ -1305,7 +1314,7 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
     height: 75vh;
   }
   .landing__container .landing__title-desktop {
-    font-family: "OCRA", sans-serif;
+    font-family: 'OCRA', sans-serif;
     font-size: 62px;
     font-weight: 100;
     color: #343434;
@@ -1407,16 +1416,16 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
     width: 100%;
     height: 400px;
   }
-  .articles .categories__article:first-child .category__main,
-  .articles-promotions h1 .categories__article:first-child .category__main {
+  .articles .categories__article:first-child .category__body,
+  .articles-promotions h1 .categories__article:first-child .category__body {
     font-size: 36px;
   }
   .articles .categories__article:nth-child(n + 2),
   .articles-promotions h1 .categories__article:nth-child(n + 2) {
     width: 48%;
   }
-  .articles .categories__article .category__main,
-  .articles-promotions h1 .categories__article .category__main {
+  .articles .categories__article .category__body,
+  .articles-promotions h1 .categories__article .category__body {
     border-radius: 0;
   }
   .articles .categories__article .articles__buttons,
@@ -1450,7 +1459,7 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   line-height: 2;
 }
 
@@ -1537,7 +1546,7 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
      ABOUT
 ****************/
 .about {
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   text-align: center;
   justify-content: center;
 }
@@ -1558,12 +1567,13 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
 .about p {
   padding: 0 2em;
   margin: 7px 0;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   text-align: left;
   font-size: 20px;
 }
 
-.about p:nth-child(7), .about p:nth-child(8) {
+.about p:nth-child(7),
+.about p:nth-child(8) {
   text-align: left;
 }
 
@@ -1613,7 +1623,7 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
 
 #post-50 .entry-title {
   display: flex;
-  font-family: "OCRA", sans-serif;
+  font-family: 'OCRA', sans-serif;
   font-weight: 300;
 }
 
@@ -1672,7 +1682,7 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
 .search-queries {
   text-align: center;
   width: 85%;
-  font-family: "OCRA", sans-serif;
+  font-family: 'OCRA', sans-serif;
   border-bottom: solid 1px #e3e3e3;
   margin-bottom: 20px;
   padding-bottom: 20px;
