@@ -307,6 +307,12 @@
   z-index: 1000;
 }
 
+.header-shim {
+  width: 100%;
+  height: 250px;
+  background: $white;
+}
+
 /* Tablet & Desktop */
 
 @include media('medium-large') {
@@ -397,15 +403,7 @@
       }
     }
   }
-}
 
-.header-shim {
-  width: 100%;
-  height: 250px;
-  background: $white;
-}
-
-@include media('medium-large') {
   .header-shim {
     height: 140px;
   }

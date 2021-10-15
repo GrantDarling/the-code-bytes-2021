@@ -809,6 +809,12 @@ table th {
   z-index: 1000;
 }
 
+.header-shim {
+  width: 100%;
+  height: 250px;
+  background: #ffffff;
+}
+
 /* Tablet & Desktop */
 @media only screen and (min-width: 992px) {
   #mobile-title,
@@ -875,15 +881,6 @@ table th {
   .sub-menu li:hover {
     background: #ffffff;
   }
-}
-
-.header-shim {
-  width: 100%;
-  height: 250px;
-  background: #ffffff;
-}
-
-@media only screen and (min-width: 992px) {
   .header-shim {
     height: 140px;
   }
@@ -905,13 +902,13 @@ table th {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: column;
-  text-align: center;
   width: 100%;
   height: 100%;
+  max-width: 1500px;
+  flex-direction: column;
+  text-align: center;
   background: #ffffff;
   padding: 3% 0;
-  max-width: 1500px;
 }
 
 .main #footer-section-1,
@@ -922,8 +919,8 @@ table th {
 }
 
 .main .newsletter {
-  height: 100%;
   width: 100%;
+  height: 100%;
   padding: 0;
   border: none;
 }
