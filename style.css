@@ -994,7 +994,6 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
 }
 
 .promotions__button {
-  cursor: pointer;
   width: 50%;
   height: 48px;
   font-size: 20px;
