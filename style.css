@@ -1349,11 +1349,11 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
 /********************
       Share 
 *********************/
-div#ss-floating-bar a {
+#ss-floating-bar a {
   background-color: #343434;
 }
 
-div#ss-floating-bar a:hover {
+#ss-floating-bar a:hover {
   background-color: #f89e86;
 }
 
