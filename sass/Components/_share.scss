@@ -1,0 +1,13 @@
+/********************
+      Share 
+*********************/
+
+div#ss-floating-bar {
+  a {
+    background-color: $CB-BLACK;
+
+    &:hover {
+      background-color: $CB-ACCENT;
+    }
+  }
+}

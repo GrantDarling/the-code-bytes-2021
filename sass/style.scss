@@ -1,28 +1,5 @@
 @import 'Abstracts/_theme-header';
 
-// TO BE REMOVED
-div#ss-floating-bar {
-  display: none;
-}
-
-.review-snippet {
-  border: solid 1px lightgrey;
-  padding: 20px 30px;
-}
-
-.review-snippet .content-container {
-  display: flex;
-  height: 140px;
-}
-
-.review-snippet img {
-  width: auto !important;
-  margin-right: 15px;
-}
-
-.review-snippet h3 {
-  margin-top: 0;
-}
 /* VENDORS */
 @import 'Vendors/bourbon/bourbon';
 
@@ -38,6 +15,7 @@ div#ss-floating-bar {
 
 /* Layout */
 @import 'Layouts/header';
+@import 'Layouts/sidebars';
 @import 'Layouts/footer';
 
 /* Components */
@@ -45,6 +23,8 @@ div#ss-floating-bar {
 @import 'Components/promotional';
 @import 'Components/comments';
 @import 'Components/_categories';
+@import 'Components/_share';
+@import 'Components/_review';
 
 /* Pages */
 @import 'Pages/_home';
