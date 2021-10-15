@@ -1117,21 +1117,6 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
   padding: 0 20px;
 }
 
-#comments textarea {
-  overflow: auto;
-  width: 90%;
-  margin: auto;
-}
-
-#comments p label {
-  width: 100%;
-  display: block;
-}
-
-#comments a {
-  color: #f89e86;
-}
-
 #comments article {
   border: solid 1px #343434;
   padding: 20px;
@@ -1144,6 +1129,21 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
 
 #comments ol li {
   list-style-type: none;
+}
+
+#comments a {
+  color: #f89e86;
+}
+
+#comments textarea {
+  overflow: auto;
+  width: 90%;
+  margin: auto;
+}
+
+#comments p label {
+  width: 100%;
+  display: block;
 }
 
 /****************

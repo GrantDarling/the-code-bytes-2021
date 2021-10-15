@@ -5,25 +5,8 @@
 #comments {
   max-width: 900px;
   margin-top: 14vh;
-
-  textarea {
-    overflow: auto;
-    width: 90%;
-    margin: auto;
-  }
   box-sizing: border-box;
   padding: 0 20px;
-
-  p {
-    label {
-      width: 100%;
-      display: block;
-    }
-  }
-
-  a {
-    color: $CB-ACCENT;
-  }
 
   article {
     border: solid 1px $CB-BLACK;
@@ -39,5 +22,20 @@
     li {
       list-style-type: none;
     }
+  }
+
+  a {
+    color: $CB-ACCENT;
+  }
+
+  textarea {
+    overflow: auto;
+    width: 90%;
+    margin: auto;
+  }
+
+  p label {
+    width: 100%;
+    display: block;
   }
 }
