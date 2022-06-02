@@ -15,35 +15,32 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 The Code Bytes 2021 is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+div#ss-floating-bar {
+  display: none;
+}
+
+* {
+  background: red !important;
+}
+
 /* VENDORS */
 /* Abstract */
-/****************
-    VARIABLES
-****************/
 /****************
      MIXINS
 ****************/
 /****************
-      FONTS
+    VARIABLES
 ****************/
-/* @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap"); */
 @font-face {
   font-family: 'OCRA';
-  src: url('fonts/OCRA.woff2') format('woff2'),
-    url('fonts/OCRA.woff') format('woff'),
-    url('fonts/OCRA.ttf') format('truetype');
+  src: url("fonts/OCRA.woff2") format("woff2"), url("fonts/OCRA.woff") format("woff"), url("fonts/OCRA.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-/* html * {
-  font-family: 'PT Sans', Helvetica, Arial, Sans-Serif;
-} */
 
 /* Base */
-/****************
-  ACCESSIBILITY
-****************/
 /* Text meant only for screen readers. */
 .screen-reader-text {
   border: 0;
@@ -412,7 +409,7 @@ h4,
 h5,
 h6,
 p {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
 }
 
 body {
@@ -435,33 +432,6 @@ iframe {
   width: 100%;
 }
 
-a {
-  color: black;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #f89e86;
-}
-
-p {
-  font-size: 18px;
-}
-
-table {
-  width: 90%;
-}
-
-table,
-table td {
-  border: solid 1px #343434;
-}
-
-table th {
-  background: #343434;
-  color: #ffffff;
-}
-
 .entry-content {
   height: 100vh;
 }
@@ -470,7 +440,7 @@ table th {
 .page-title {
   font-size: 20px;
   text-align: center;
-  font-family: 'OCRA', sans-serif;
+  font-family: "OCRA", sans-serif;
   margin-bottom: 40px;
   max-width: 1500px;
   width: 100%;
@@ -483,7 +453,7 @@ table th {
   .page-title {
     font-size: 36px;
     text-align: center;
-    font-family: 'OCRA', sans-serif;
+    font-family: "OCRA", sans-serif;
   }
 }
 
@@ -576,14 +546,14 @@ table th {
 }
 
 .main-navigation a {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   text-decoration: none;
   display: block;
 }
 
 .main-navigation #search-form {
-  font-family: 'OCRA', sans-serif;
+  font-family: "OCRA", sans-serif;
   height: 24px;
   margin: 0 40px 0 0;
 }
@@ -627,7 +597,7 @@ table th {
   background: #ffffff;
   border: solid 1px #9b9999;
   box-shadow: 0px 1px 8px #e3e3e3;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   color: #343434;
   text-align: center;
@@ -637,7 +607,7 @@ table th {
 
 .nav-links a {
   font-size: 22px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   text-decoration: none;
   color: #343434;
   padding: 1em;
@@ -645,7 +615,7 @@ table th {
 
 /* Mobile */
 #mobile-title {
-  font-family: 'OCRA', sans-serif;
+  font-family: "OCRA", sans-serif;
   font-weight: 100;
   font-size: 16px;
 }
@@ -738,11 +708,11 @@ table th {
   position: relative;
   overflow-y: scroll;
   width: 100%;
-  height: auto;
+  height: 17vh;
   margin-top: 10px;
   padding: 10px 0;
-  background: #ffffff;
-  border: solid 1px #e3e3e3;
+  background: #f5f5f5;
+  box-shadow: inset 0px 11px 8px -10px #ccc, inset 0px -4px 8px -3px #ccc;
 }
 
 .main-navigation.toggled .focus .sub-menu li {
@@ -789,12 +759,6 @@ table th {
   background: #fafafa;
   box-shadow: 5px -1px 13px #d3d2d2;
   z-index: 1000;
-}
-
-.header-shim {
-  width: 100%;
-  height: 250px;
-  background: #ffffff;
 }
 
 /* Tablet & Desktop */
@@ -863,151 +827,17 @@ table th {
   .sub-menu li:hover {
     background: #ffffff;
   }
-  .header-shim {
-    height: 140px;
-  }
 }
 
-/****************
-     Sidebars
-****************/
-#sidebar-1,
-#sidebar-2 {
-  display: none;
-}
-
-#sidebar-3 {
+.header-shim {
   width: 100%;
-}
-
-#sidebar-3 > p {
-  padding: 0;
-  margin: 0;
-}
-
-#sidebar-3 .banner .newsletter {
-  padding: 0;
-  margin-bottom: 20px;
-  justify-content: space-around;
-}
-
-#sidebar-3 .banner .newsletter header {
-  max-width: 100px;
-  border: none;
-}
-
-#sidebar-3 .banner .newsletter header img {
-  width: 100%;
-}
-
-#sidebar-3 .banner .newsletter .body {
-  width: 40%;
-  text-align: center;
-}
-
-#sidebar-3 .banner .newsletter .promotion__button {
-  height: 40px;
-}
-
-#sidebar-3 .banner .newsletter .promotions__button {
-  width: 20%;
-}
-
-#sidebar-3 .banner .newsletter .promotions__button button,
-#sidebar-3 .banner .newsletter .promotions__p {
-  font-size: 13px;
+  height: 300px;
+  background: #ffffff;
 }
 
 @media only screen and (min-width: 767px) {
-  #sidebar-3 .banner .newsletter {
-    justify-content: center;
-  }
-  #sidebar-3 .banner .newsletter h3 {
-    text-align: center;
-  }
-  #sidebar-3 .banner .promotions__button button,
-  #sidebar-3 .banner .promotions__p {
-    font-size: 16px;
-  }
-  #sidebar-2 {
-    border: solid 1px #e3e3e3;
-    display: initial;
-    width: 25%;
-    margin: 0 20px;
-  }
-  #sidebar-2 .wp-block-group__inner-container > p {
-    display: none;
-  }
-  #sidebar-2 ul {
-    padding: 0;
-    margin: 0;
-  }
-  #sidebar-2 ul li {
-    list-style: none;
-    padding: 15px 10px;
-    border: solid 1px #e3e3e3;
-  }
-  #sidebar-2 .promotions__button button,
-  #sidebar-2 .promotions__p {
-    font-size: 15px;
-  }
-  .sidebar .wp-block-column > p {
-    display: none;
-  }
-  .sidebar .wp-block-columns,
-  .sidebar .wp-block-column {
-    height: 100%;
-  }
-  .sidebar .wp-block-column {
-    text-align: center;
-    flex-direction: column;
-    display: flex;
-  }
-  .sidebar .promotions {
-    height: 92.5%;
-  }
-  .sidebar .promotions {
-    align-items: flex-start;
-  }
-  .sidebar .promotions .newsletter {
-    width: 100%;
-    top: 210px;
-    background: #ffffff;
-    flex-grow: 1;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  #sidebar-1,
-  #sidebar-2,
-  .sidebar {
-    display: initial;
-    width: 40%;
-    border: solid 1px #e3e3e3;
-    margin: 0 20px;
-    text-align: center;
-  }
-  #sidebar-1 {
-    border: none;
-    margin: 0 50px 0 0;
-  }
-  #sidebar-2 {
-    margin: 0 0 0 50px;
-  }
-  .widget_custom_html,
-  .custom-html-widget {
-    width: 100%;
-    height: 100%;
-  }
-  #sidebar-container {
-    position: sticky;
-    top: 120px;
-  }
-}
-
-@media only screen and (min-width: 1248px) {
-  #sidebar-3 {
-    max-width: 700px;
+  .header-shim {
+    height: 140px;
   }
 }
 
@@ -1027,13 +857,13 @@ table th {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  max-width: 1500px;
   flex-direction: column;
   text-align: center;
+  width: 100%;
+  height: 100%;
   background: #ffffff;
   padding: 3% 0;
+  max-width: 1500px;
 }
 
 .main #footer-section-1,
@@ -1044,8 +874,8 @@ table th {
 }
 
 .main .newsletter {
-  width: 100%;
   height: 100%;
+  width: 100%;
   padding: 0;
   border: none;
 }
@@ -1063,7 +893,7 @@ table th {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   width: 100%;
   height: 40px;
   background: black;
@@ -1088,17 +918,14 @@ button,
   border: solid 1px #9b9999;
   box-shadow: 0px 1px 8px #e3e3e3;
   padding: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   color: #343434;
 }
 
-a button,
-a .button,
-a .newsletter form .tnp-submit,
-.newsletter form a .tnp-submit {
+a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-submit {
   font-size: 22px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   text-decoration: none;
   color: #343434;
 }
@@ -1119,6 +946,7 @@ a .newsletter form .tnp-submit,
 }
 
 .promotions__button {
+  cursor: pointer;
   width: 50%;
   height: 48px;
   font-size: 20px;
@@ -1169,7 +997,7 @@ a .newsletter form .tnp-submit,
 
 .newsletter p,
 .newsletter .tnp-field label {
-  font-family: 'OCRA', sans-serif;
+  font-family: "OCRA", sans-serif;
 }
 
 .newsletter input {
@@ -1193,7 +1021,7 @@ a .newsletter form .tnp-submit,
 .newsletter form input[type='email'] {
   height: 35px;
   border: solid 1px #9b9999 !important;
-  font-family: 'OCRA', sans-serif;
+  font-family: "OCRA", sans-serif;
 }
 
 .newsletter form .tnp-privacy,
@@ -1241,6 +1069,21 @@ a .newsletter form .tnp-submit,
   padding: 0 20px;
 }
 
+#comments textarea {
+  overflow: auto;
+  width: 90%;
+  margin: auto;
+}
+
+#comments p label {
+  width: 100%;
+  display: block;
+}
+
+#comments a {
+  color: #f89e86;
+}
+
 #comments article {
   border: solid 1px #343434;
   padding: 20px;
@@ -1255,28 +1098,20 @@ a .newsletter form .tnp-submit,
   list-style-type: none;
 }
 
-#comments a {
-  color: #f89e86;
-}
-
-#comments textarea {
-  overflow: auto;
-  width: 90%;
-  margin: auto;
-}
-
-#comments p label {
-  width: 100%;
-  display: block;
-}
-
 /****************
     CATEGORIES
 ****************/
 .categories__article-container {
+  padding-top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.categories__article {
+  margin: 0;
+  width: 75%;
+  margin-bottom: 40px;
 }
 
 .categories__article {
@@ -1285,10 +1120,11 @@ a .newsletter form .tnp-submit,
   align-items: center;
   width: 100%;
   height: 250px;
-  margin: 25px 25px 50px;
   position: relative;
+  margin: 25px 25px 50px 25px;
+  text-decoration: none;
   color: #ffffff;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   border-radius: 4px;
   box-shadow: 5px -1px 6px #d3d2d2;
@@ -1298,18 +1134,17 @@ a .newsletter form .tnp-submit,
   box-shadow: none;
 }
 
-.categories__article:hover .category__body {
+.categories__article:hover .category__main {
   border: #f89e86 solid 4px;
 }
 
-.categories__article .category__body {
+.categories__article .category__main {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-  text-align: center;
-  border-radius: 4px;
+  border-radius: 3px;
   font-size: 23px;
   padding: 0 1em;
 }
@@ -1324,12 +1159,8 @@ a .newsletter form .tnp-submit,
   align-items: center;
   width: 100%;
   height: 35px;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(0, 0, 0, 0.601278) 45%
-  );
-  font-family: 'OCRA', sans-serif;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.601278) 45%);
+  font-family: "OCRA", sans-serif;
   font-size: 12px;
   border-top: solid 1px #ffffff40;
 }
@@ -1348,59 +1179,6 @@ a .newsletter form .tnp-submit,
   .category-archive .categories__article {
     display: flex;
     width: 75%;
-  }
-}
-
-/********************
-      Share 
-*********************/
-#ss-floating-bar a {
-  background-color: #343434;
-}
-
-#ss-floating-bar a:hover {
-  background-color: #f89e86;
-}
-
-/********************
-      Review 
-*********************/
-.review-snippet {
-  border: solid 1px lightgrey;
-  padding: 20px 30px;
-}
-
-.review-snippet .content-container {
-  display: flex;
-  height: 140px;
-}
-
-.review-snippet img {
-  width: auto !important;
-  margin-right: 15px;
-}
-
-.review-snippet h3 {
-  margin-top: 0;
-}
-
-@media only screen and (max-width: 600px) {
-  .review-snippet img {
-    display: none !important;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .widget_custom_html,
-  .custom-html-widget {
-    height: 100%;
-    width: 100%;
-  }
-  #sidebar-container,
-  #sidebar-container p {
-    height: 100%;
-    display: block;
-    width: 100%;
   }
 }
 
@@ -1479,7 +1257,7 @@ a .newsletter form .tnp-submit,
 }
 
 .landing__about {
-  font-family: 'OCRA', sans-serif;
+  font-family: "OCRA", sans-serif;
   font-size: 12px;
   color: #343434;
 }
@@ -1511,7 +1289,7 @@ a .newsletter form .tnp-submit,
     max-width: 1500px;
   }
   .landing__banner .landing__tagline {
-    font-family: 'OCRA', sans-serif;
+    font-family: "OCRA", sans-serif;
     font-size: 9.5px;
   }
   .landing__banner .landing__tagline span {
@@ -1527,7 +1305,7 @@ a .newsletter form .tnp-submit,
     height: 75vh;
   }
   .landing__container .landing__title-desktop {
-    font-family: 'OCRA', sans-serif;
+    font-family: "OCRA", sans-serif;
     font-size: 62px;
     font-weight: 100;
     color: #343434;
@@ -1576,7 +1354,6 @@ a .newsletter form .tnp-submit,
 
 .articles-promotions {
   max-width: 1500px;
-  padding: 30px;
 }
 
 .articles-promotions h1 {
@@ -1630,16 +1407,16 @@ a .newsletter form .tnp-submit,
     width: 100%;
     height: 400px;
   }
-  .articles .categories__article:first-child .category__body,
-  .articles-promotions h1 .categories__article:first-child .category__body {
+  .articles .categories__article:first-child .category__main,
+  .articles-promotions h1 .categories__article:first-child .category__main {
     font-size: 36px;
   }
   .articles .categories__article:nth-child(n + 2),
   .articles-promotions h1 .categories__article:nth-child(n + 2) {
     width: 48%;
   }
-  .articles .categories__article .category__body,
-  .articles-promotions h1 .categories__article .category__body {
+  .articles .categories__article .category__main,
+  .articles-promotions h1 .categories__article .category__main {
     border-radius: 0;
   }
   .articles .categories__article .articles__buttons,
@@ -1663,14 +1440,7 @@ a .newsletter form .tnp-submit,
 /****************
      SINGLE
 ****************/
-.article-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
 .article {
-  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1680,7 +1450,7 @@ a .newsletter form .tnp-submit,
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   line-height: 2;
 }
 
@@ -1707,16 +1477,14 @@ a .newsletter form .tnp-submit,
 
 .article article .author-and-date {
   box-sizing: border-box;
-  padding: 0;
+  padding: 0 20px;
   margin-top: 20px;
 }
 
 .article article .author-and-date img {
-  width: 45px;
-  height: 45px;
+  width: 30px;
+  height: 30px;
   border-radius: 100%;
-  float: left;
-  margin-right: 20px;
 }
 
 .article article .content {
@@ -1725,18 +1493,23 @@ a .newsletter form .tnp-submit,
   padding: 0 20px;
 }
 
-.banner,
-.banner .newsletter {
-  width: 100%;
+.article #sidebar-1,
+.article #sidebar-2 {
+  width: 0;
 }
 
 @media only screen and (min-width: 767px) {
   .article {
-    width: 90%;
+    width: 100%;
   }
   .article article {
-    max-width: 700px;
-    border: solid 1px #e3e3e3;
+    width: 50%;
+    max-width: 600px;
+  }
+  .article #sidebar-1,
+  .article #sidebar-2 {
+    display: flex;
+    width: 25%;
   }
 }
 
@@ -1744,37 +1517,11 @@ a .newsletter form .tnp-submit,
   margin: 20px 0;
 }
 
-.nav-next,
-.nav-previous {
-  background: #ffffff;
-  border: solid 1px #9b9999;
-  box-shadow: 0px 1px 8px #e3e3e3;
-  padding: 20px;
-  margin: 10px;
-  width: 80%;
-}
-
-.nav-next:hover,
-.nav-previous:hover {
-  border: solid 1px #f89e86;
-}
-
-.post-navigation .nav-links {
+.nav-links {
   box-sizing: border-box;
   max-width: 71%;
   margin: auto;
   margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  border: none;
-  box-shadow: none;
-  display: block;
-}
-
-.post-navigation .nav-links a {
-  padding: 0;
 }
 
 .gist {
@@ -1786,24 +1533,13 @@ a .newsletter form .tnp-submit,
   margin: auto;
 }
 
-@media only screen and (min-width: 992px) {
-  .post-navigation .nav-links {
-    display: inline-block;
-  }
-  .post-navigation .nav-links .nav-next,
-  .post-navigation .nav-links .nav-previous {
-    width: 40%;
-    display: inherit;
-  }
-}
-
 /****************
      ABOUT
 ****************/
 .about {
-  font-family: 'PT Sans', sans-serif;
-  text-align: left;
-  justify-content: left;
+  font-family: "PT Sans", sans-serif;
+  text-align: center;
+  justify-content: center;
 }
 
 .about img {
@@ -1813,7 +1549,7 @@ a .newsletter form .tnp-submit,
 
 .about h3 {
   text-align: left;
-  padding: 0 1.3em;
+  padding: 0 1em;
   width: 100%;
   padding-top: 30px;
   font-size: 30px;
@@ -1822,13 +1558,12 @@ a .newsletter form .tnp-submit,
 .about p {
   padding: 0 2em;
   margin: 7px 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   text-align: left;
   font-size: 20px;
 }
 
-.about p:nth-child(7),
-.about p:nth-child(8) {
+.about p:nth-child(7), .about p:nth-child(8) {
   text-align: left;
 }
 
@@ -1876,13 +1611,9 @@ a .newsletter form .tnp-submit,
   font-size: 20px;
 }
 
-#post-50 .about {
-  width: 85% !important;
-}
-
 #post-50 .entry-title {
   display: flex;
-  font-family: 'OCRA', sans-serif;
+  font-family: "OCRA", sans-serif;
   font-weight: 300;
 }
 
@@ -1916,16 +1647,13 @@ a .newsletter form .tnp-submit,
     display: flex;
     justify-content: center;
     align-items: center;
-    height: unset;
+    height: 60vh;
     width: 90%;
   }
   .about p,
   .about h3 {
     text-align: left;
     padding: 0;
-  }
-  .about h1 {
-    width: 100%;
   }
   .about a {
     width: auto;
@@ -1944,7 +1672,7 @@ a .newsletter form .tnp-submit,
 .search-queries {
   text-align: center;
   width: 85%;
-  font-family: 'OCRA', sans-serif;
+  font-family: "OCRA", sans-serif;
   border-bottom: solid 1px #e3e3e3;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -1962,4 +1690,7 @@ a .newsletter form .tnp-submit,
 /****************
      SHAME
 ****************/
+* {
+  background: red;
+}
 /*# sourceMappingURL=style.css.map */

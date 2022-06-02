@@ -19,7 +19,7 @@ get_header();
 		<div class="landing__banner">
 			<div class="landing__tagline">Keeping Code Cool <span>Since 2020.</span></div>
 			<div class="landing__socials">
-				<a target="_blank" class="landing__social" href="mailto:grantcarterdarling@gmail.com?subject=The Code Bytes Inquiry"><img src="https://thecodebytes.com/wp-content/uploads/2021/01/email-me.svg" alt="Medium" /></a>
+				<a target="_blank" class="landing__social" href="mailto:developer@grantdarling.com?subject=The Code Bytes Inquiry"><img src="https://thecodebytes.com/wp-content/uploads/2021/01/email-me.svg" alt="Medium" /></a>
 				<a target="_blank" class="landing__social" href="https://grantdarling.medium.com/"><img src="https://thecodebytes.com/wp-content/uploads/2021/01/Medium-Logo.svg" alt="Email" /></a>
 			</div>
 		</div>
@@ -92,7 +92,7 @@ get_header();
 					</header>
 					<h2> Host with Digital Ocean </h2>
 						<p class="promotions__p"> $100 Free Credit </p>
-						<a class="promotions__button" target="_blank" href="https://www.digitalocean.com/?refcode=398f3c7d3090&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><button >Signup</button></a>
+						<a class="promotions__button" target="_blank" href="https://www.digitalocean.com/?refcode=029481ae0e81&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><button >Signup</button></a>
 				</aside>
 			</div>
 		</section>

@@ -9,15 +9,10 @@
 
 #sidebar-3 {
   width: 100%;
-  border: none;
-  max-width: unset;
-
-  h3 {
-    text-align: left;
-  }
 
   & > p {
-    display: none;
+    padding: 0; // remove unwanted auto generated <p> tag heights
+    margin: 0;
   }
 
   .banner {
@@ -27,13 +22,11 @@
       justify-content: space-around;
 
       header {
-        width: 100%;
         max-width: 100px;
         border: none;
 
         img {
           width: 100%;
-          height: auto;
         }
       }
 
@@ -41,6 +34,7 @@
         width: 40%;
         text-align: center;
       }
+
       .promotion__button {
         height: 40px;
       }
@@ -48,6 +42,7 @@
       .promotions__button {
         width: 20%;
       }
+
       .promotions__button button,
       .promotions__p {
         font-size: 13px;
@@ -60,11 +55,13 @@
   #sidebar-3 {
     .banner {
       .newsletter {
+        justify-content: center;
+
         h3 {
           text-align: center;
         }
-        justify-content: center;
       }
+
       .promotions__button button,
       .promotions__p {
         font-size: 16px;
@@ -73,9 +70,9 @@
   }
 
   #sidebar-2 {
+    @include border();
     display: initial;
     width: 25%;
-    @include border();
     margin: 0 20px;
   }
 
@@ -120,6 +117,7 @@
 
     .promotions {
       align-items: flex-start;
+
       .newsletter {
         width: 100%;
         top: 210px;

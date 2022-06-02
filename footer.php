@@ -12,6 +12,8 @@
 ?>
 
 <!-- AMP ADS -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3304193651719804"
+     crossorigin="anonymous"></script>
 <amp-auto-ads type="adsense" data-ad-client="ca-pub-3304193651719804"></amp-auto-ads>
 
 <footer id="colophon" class="site-footer">

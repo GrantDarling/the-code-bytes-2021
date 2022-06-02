@@ -12,7 +12,7 @@
 	<!-- Header -->
 	<header>
 		<h1><?php echo get_the_title() ?> </h1>
-		<?php echo get_the_post_thumbnail() ?>
+<!-- 		<?php  ?> echo get_the_post_thumbnail() -->
 		<div class="author-and-date">	
 			<?php echo get_avatar(get_the_author_meta('user_email')) ?>
 			Written By: <?php echo get_the_author() ?> <br>
