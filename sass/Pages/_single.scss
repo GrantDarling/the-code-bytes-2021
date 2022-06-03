@@ -2,6 +2,12 @@
      SINGLE
 ****************/
 
+.blog-post-container {
+  max-width: 1116px;
+  margin: auto;
+  margin-top: 40px;
+}
+
 .article-container {
   display: flex;
   justify-content: center;
@@ -35,19 +41,31 @@
 
     header {
       box-sizing: border-box;
-      padding: 0 20px;
       line-height: 1.5;
+    }
+
+    .float-box > header {
+      text-align: center;
     }
 
     .author-and-date {
       box-sizing: border-box;
       padding: 0;
       margin-top: 20px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+
+      .flex-item:not(:first-child) {
+        flex: 1;
+      }
+
       img {
         @include box(45px);
         border-radius: 100%;
-        float: left;
         margin-right: 20px;
+        margin-left: 20px; // because its set to margin:auto but idk where
       }
     }
 
@@ -71,7 +89,6 @@
 
     article {
       max-width: 700px;
-      border: solid 1px $white-mercury;
     }
   }
 }

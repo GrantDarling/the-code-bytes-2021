@@ -11,22 +11,17 @@ get_header();
 ?>
 
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main blog-post-container">
 			<?php
 				while ( have_posts() ) :
 					the_post();
-					dynamic_sidebar( 'sidebar-3' );
-					echo 
-					'<div class="article-container">';
+					echo '<div class="article-container">';
 						dynamic_sidebar( 'sidebar-2' );
-						echo
-						'<div class="article">';
+						echo '<div class="article">';
 								get_template_part( 'template-parts/content-single', get_post_type() );
-						echo 
-						'</div>';
+						echo '</div>';
 						get_sidebar();
-					echo
-					'</div>';
+					echo '</div>';
 					the_post_navigation(
 						array(
 							'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'the-code-bytes-2021' ) . '</span> <span class="nav-title">%title</span>',

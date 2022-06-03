@@ -46,6 +46,10 @@
   border: solid 1px $color;
 }
 
+@mixin border-bottom($color: $white-mercury) {
+  border-bottom: solid 1px $color;
+}
+
 // Animations : @include animation(animation-name 5s linear 2s infinite alternate);
 @mixin animation($animation...) {
   -webkit-animation: $animation;

@@ -69,8 +69,24 @@ table {
   }
 }
 
+.width-100 {
+  width: 100%;
+}
+
+#page {
+  background: $white;
+}
+
 .entry-content {
   height: 100vh;
+}
+
+.float-box {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px #edecec;
+  height: 100%;
+  width: 100%;
 }
 
 .page-header,

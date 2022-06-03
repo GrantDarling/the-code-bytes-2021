@@ -112,7 +112,7 @@ function banner_function($atts){
   ), $atts);
 
 	$template = 
-		'<div class="banner">
+		'<div class="banner float-box">
 			<aside class="newsletter">
 				<header>
 					<img src="'.$args['img'].'" />
