@@ -12,14 +12,21 @@ main {
   width: 100%;
 }
 
-h1,
+p {
+  font-family: $primary-font;
+}
+
+h1 {
+  font-family: $header-font;
+  font-weight: 300;
+}
+
 h2,
 h3,
 h4,
-h5,
-h6,
-p {
-  font-family: $primary-font;
+h5 {
+  font-family: $header-font;
+  font-weight: 700;
 }
 
 body {
@@ -84,9 +91,11 @@ table {
 .float-box {
   background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 8px 20px #edecec;
+  box-shadow: 0 8px 20px #efeeee;
+  // border: solid 1px #ecebeb;
   height: 100%;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .page-header,

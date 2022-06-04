@@ -2,154 +2,110 @@
      SINGLE
 ****************/
 
-.blog-post-container {
-  max-width: 1116px;
-  margin: auto;
-  margin-top: 40px;
-}
+.single {
+  font-family: $primary-font;
 
-.article-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.article {
-  width: 90%;
-
-  article {
-    display: flex;
+  &__shim {
     width: 100%;
-    flex-wrap: wrap;
-    font-family: $primary-font;
-    line-height: 2;
-
-    img {
-      width: 100%;
-      height: auto;
-      max-width: 100vw;
-      display: block;
-    }
-
-    a {
-      color: $CB-ACCENT;
-
-      &:hover {
-        color: tint($CB-ACCENT, 20%);
-      }
-    }
-
-    header {
-      box-sizing: border-box;
-      line-height: 1.5;
-    }
-
-    .float-box > header {
-      text-align: center;
-    }
-
-    .author-and-date {
-      box-sizing: border-box;
-      padding: 0;
-      margin-top: 20px;
-      height: 45px;
-      display: flex;
-      align-items: center;
-      justify-content: left;
-
-      .flex-item:not(:first-child) {
-        flex: 1;
-      }
-
-      img {
-        @include box(45px);
-        border-radius: 100%;
-        margin-right: 20px;
-        margin-left: 20px; // because its set to margin:auto but idk where
-      }
-    }
-
-    .content {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 0 20px;
-    }
+    height: 20px;
   }
-  @include flex-center();
-}
 
-.banner,
-.banner .newsletter {
-  width: 100%;
-}
-
-@include media('medium') {
-  .article {
-    width: 90%;
-
-    article {
-      max-width: 700px;
-    }
+  &__article {
+    width: 95%;
+    max-width: 1000px;
   }
-}
-
-.nav-previous {
-  margin: 20px 0;
-}
-
-.nav-next,
-.nav-previous {
-  background: $white;
-  border: solid 1px $grey-dust;
-  box-shadow: 0px 1px 8px $white-mercury;
-  padding: 20px;
-  margin: 10px;
-  width: 80%;
-
-  &:hover {
-    border: solid 1px $CB-ACCENT;
-  }
-}
-
-.post-navigation {
-  .nav-links {
-    box-sizing: border-box;
-    max-width: 71%;
-    margin: auto;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    border: none;
-    box-shadow: none;
-    display: block;
-
-    a {
-      padding: 0;
-    }
-  }
-}
-
-.gist {
-  font-size: 16px;
-  color: $CB-BLACK;
-  text-align: left;
-  direction: ltr;
-  max-width: 91vw;
-  margin: auto;
 }
 
 @include media('medium-large') {
-  .post-navigation {
-    .nav-links {
-      display: inline-block;
+  .single__article {
+    width: 65%;
+  }
+}
 
-      .nav-next,
-      .nav-previous {
+.article {
+  margin-top: 20px;
+  box-sizing: border-box;
+  padding: 20px 20px;
+  line-height: 2;
+  max-width: 1116px;
+
+  @include media('medium-large') {
+    & {
+      padding: 20px 50px;
+    }
+  }
+
+  a {
+    color: $CB-ACCENT;
+  }
+
+  a:hover {
+    color: tint($CB-ACCENT, 20%);
+  }
+
+  &__title {
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  &__author-info {
+    @include flex-align(left, center);
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+
+  &__author-info > .avatar {
+    @include box(45px);
+    border-radius: 100%;
+    margin: 0 20px 0 0;
+  }
+
+  &__author-date-container {
+    @include flex-center();
+  }
+
+  &__author-date-divider {
+    @include box(6px);
+    margin: 0 7px;
+    border-radius: 50%;
+    background-color: $CB-ACCENT;
+  }
+}
+
+.single__navigation {
+  &--previous,
+  &--next {
+    font-weight: bold;
+  }
+
+  .nav-previous,
+  .nav-next {
+    a {
+      padding: 30px;
+      width: 100%;
+      min-height: 70px;
+      border: solid 1px $white;
+    }
+
+    @include media('medium-large') {
+      & {
         width: 40%;
         display: inherit;
       }
     }
   }
+
+  .nav-links {
+    border-top: solid #e4e4e4 1px;
+    border-bottom: solid #e4e4e4 1px;
+    margin: 10px 0 50px 0;
+
+    @include media('medium-large') {
+      & {
+        @include flex-align(space-around, flex-start);
+      }
+    }
+  }
 }
+
+// 175

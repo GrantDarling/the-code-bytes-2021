@@ -25,7 +25,7 @@
       justify-content: space-around;
 
       header {
-        max-width: 100px;
+        max-width: 160px;
         border: none;
 
         img {
@@ -46,9 +46,17 @@
         width: 20%;
       }
 
-      .promotions__button button,
       .promotions__p {
-        font-size: 13px;
+        font-size: 15px;
+      }
+      .promotions__button button {
+        font-size: 18px;
+        border-radius: 10px;
+        border: solid 1px $CB-ACCENT;
+
+        &:hover {
+          border: solid 1px $CB-BLACK;
+        }
       }
     }
   }
@@ -57,9 +65,8 @@
 @include media('medium') {
   #sidebar-3 {
     .banner {
+      margin-top: 40px;
       .newsletter {
-        justify-content: center;
-
         h3 {
           text-align: center;
         }
@@ -105,7 +112,29 @@
     }
     .wp-block-columns,
     .wp-block-column {
-      height: 100%;
+      // height: 100%;
+    }
+
+    #block-31 {
+      margin-top: 30px;
+      position: sticky;
+      top: 120px;
+      @include flex-align(center, stretch);
+      flex-wrap: wrap;
+      // background: #ffffff;
+      border-radius: 10px;
+      // box-shadow: 0 8px 20px #edecec;
+      height: 84vh;
+      width: 100%;
+      box-sizing: border-box;
+
+      iframe {
+        border-radius: 10px;
+        width: 100%;
+      }
+      a {
+        width: 100%;
+      }
     }
 
     .wp-block-column {
@@ -136,7 +165,7 @@
   #sidebar-2,
   .sidebar {
     display: initial;
-    width: 40%;
+    width: 30%;
     @include border();
     margin: 0 20px;
     text-align: center;
@@ -144,7 +173,7 @@
 
   #sidebar-1 {
     border: none;
-    margin: 0 50px 0 0;
+    max-width: 400px;
   }
 
   #sidebar-2 {
@@ -158,9 +187,14 @@
   }
 
   #sidebar-container {
-    position: sticky;
-    top: 120px;
+    // position: sticky;
+    // top: 120px;
   }
+}
+
+.banner,
+.banner .newsletter {
+  width: 100%;
 }
 
 @include media('large') {
@@ -169,16 +203,18 @@
   }
 }
 
-.wp-container-2.wp-block-group {
-  // fix this layering!!
+#block-29 {
+  // actually sidebar 2 -- fix me
+  // position: sticky;
+  // top: 130px;
+  // height: 80vh;
+
   // .float-box code
   background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 8px 20px #edecec;
-  height: 100%;
-  width: 100%;
+  box-shadow: 0 8px 20px #efeeee;
   // end
-  padding: 10px 40px;
+  padding: 40px;
 
   h2 {
     margin-bottom: 0;
@@ -191,7 +227,14 @@
 
     li {
       padding: 20px 0;
-      @include border-bottom();
+      &:not(:last-child) {
+        @include border-bottom();
+      }
     }
   }
+}
+
+iframe#\$iradid {
+  position: relative !important;
+  top: 0 !important;
 }

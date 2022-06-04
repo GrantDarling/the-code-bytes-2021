@@ -47,6 +47,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'the-code-bytes-2021' ); ?></a>
 
 	<header id="masthead" class="site-header">
+		<div id="masthead-mimic"></div>
 	  
 		<div id="header-container">
 

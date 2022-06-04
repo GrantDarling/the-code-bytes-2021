@@ -136,23 +136,25 @@
   width: 100%;
 }
 
-.nav-links {
-  background: $white;
-  border: solid 1px $grey-dust;
-  box-shadow: 0px 1px 8px $white-mercury;
-  font-family: $primary-font;
-  font-weight: $bold;
-  color: $black-mine-shaft;
-  text-align: center;
-  padding: 1em;
-  height: 100%;
-
-  a {
-    font-size: 22px;
+header {
+  .nav-links {
+    background: $white;
+    border: solid 1px $grey-dust;
+    box-shadow: 0px 1px 8px $white-mercury;
     font-family: $primary-font;
-    text-decoration: none;
+    font-weight: $bold;
     color: $black-mine-shaft;
+    text-align: center;
     padding: 1em;
+    height: 100%;
+
+    a {
+      font-size: 22px;
+      font-family: $primary-font;
+      text-decoration: none;
+      color: $black-mine-shaft;
+      padding: 1em;
+    }
   }
 }
 
@@ -407,4 +409,18 @@
   .header-shim {
     height: 140px;
   }
+}
+
+#masthead-mimic {
+  width: 0;
+  height: 3%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(248, 158, 134, 0.5760679271708684) 100%
+  );
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }

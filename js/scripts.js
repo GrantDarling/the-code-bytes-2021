@@ -83,3 +83,32 @@ const displayActiveLink = () => {
 };
 
 displayActiveLink();
+
+const scrollCompletionBar = () => {
+  var isArticlePage = document.getElementsByClassName('single');
+  if (isArticlePage.length > 0) {
+    const body = document.body,
+      html = document.documentElement;
+
+    const height = Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight
+    );
+
+    let windowHeight = window.innerHeight;
+
+    scrollPosition = window.scrollY;
+    scrollPositionPercentage = ((scrollPosition + windowHeight) / height) * 100;
+
+    console.log(scrollPositionPercentage);
+
+    // progress bar
+    const progressBar = document.querySelector('#masthead-mimic');
+    progressBar.style.width = `${scrollPositionPercentage}%`;
+  }
+};
+
+document.addEventListener('scroll', scrollCompletionBar);
