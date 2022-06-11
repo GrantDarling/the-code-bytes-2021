@@ -158,7 +158,7 @@
 
 // General & Mobile
 .articles {
-  @include flex-align(space-around, null);
+  @include flex-align(space-around, flex-start);
   flex-wrap: wrap;
 
   .categories__article:nth-child(n + 4) {

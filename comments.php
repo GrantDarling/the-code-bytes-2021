@@ -12,7 +12,8 @@
 
 ?>
 
-<?php if ( post_password_required() ) { return; } ?>
+<?php if ( post_password_required() ) { return; } else { return; }  // hide comment section with else statement ?>
+
 
 <div id="comments" class="comments-area">
 	<?php if ( have_comments() ) : ?>

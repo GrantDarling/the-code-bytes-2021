@@ -91,7 +91,7 @@ function affiliate_function($atts){
 				</header>
 				<h2>'.$args['header'].'</h2>
 					<p class="promotions__p">'.$args['tagline'].'</p>
-					<a class="promotions__button" rel="noopener noreferrer sponsored" target="_blank" href="'.$args['href'].'"><button aria-label="promotinal-content" >signup</button></a>
+					<a class="promotions__button" rel="noopener noreferrer sponsored" target="_blank" href="'.$args['href'].'"><button aria-label="promotinal-content" >courses</button></a>
 			</aside>
 		</div>';
 
@@ -112,7 +112,7 @@ function banner_function($atts){
   ), $atts);
 
 	$template = 
-		'<div class="banner float-box">
+		'<div class="banner">
 			<aside class="newsletter">
 				<header>
 					<img src="'.$args['img'].'" />
@@ -121,7 +121,7 @@ function banner_function($atts){
 					<h3>'.$args['header'].'</h3>
 					<p class="promotions__p">'.$args['tagline'].'</p>
 				</div>
-					<a class="promotions__button" rel="noopener noreferrer sponsored" target="_blank" href="'.$args['href'].'"><button >Signup</button></a>
+					<a class="promotions__button" rel="noopener noreferrer sponsored" target="_blank" href="'.$args['href'].'"><button >browse</button></a>
 			</aside>
 		</div>';
 

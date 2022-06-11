@@ -17,7 +17,7 @@
 <amp-auto-ads type="adsense" data-ad-client="ca-pub-3304193651719804"></amp-auto-ads>
 
 <footer id="colophon" class="site-footer">
-	<section class="main">
+	<section class="footer-main">
 		<div id="footer-section-1">
 			<aside class="newsletter">
 				<h2> The Code Bytes Newsletter </h2>

@@ -9,7 +9,7 @@
 
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<div class="categories__article-container">
+		<div class="categories__blog">
 			<?php
 			$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
 			echo 
@@ -23,6 +23,6 @@
 			'</a>';
 			?>
 		</div>
-		<footer class="entry-footer"></footer>
+		<footer class="article__footer"></footer>
 	</article>
 	

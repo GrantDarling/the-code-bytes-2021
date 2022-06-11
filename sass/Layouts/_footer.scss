@@ -10,7 +10,7 @@
   border-top: solid 1px $white-mercury;
 }
 
-.main {
+.footer-main {
   @include flex-align(space-around, center);
   @include box(100%);
   max-width: $max-width;
@@ -53,7 +53,7 @@
 }
 
 @include media('medium') {
-  .main {
+  .footer-main {
     flex-direction: row;
   }
 }

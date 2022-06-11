@@ -27,7 +27,16 @@
   }
 }
 
-@media only screen and (min-width: 992px) {
+.sidebar-ad-2 {
+  img {
+    margin-top: 15px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+@include media('medium-large') {
   .widget_custom_html,
   .custom-html-widget {
     height: 100%;
@@ -35,7 +44,7 @@
   }
 
   #sidebar-container,
-  #sidebar-container p {
+  #ads-container {
     height: 100%;
     display: block;
     width: 100%;

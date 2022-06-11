@@ -26,6 +26,7 @@ $header-padding: 280px;
 // Font Families
 $primary-font: 'PT Sans', sans-serif;
 $accent-font: 'OCRA', sans-serif;
+$header-font: 'Titillium Web', sans-serif;
 
 // Font Weights
 $bold: 700;
@@ -47,4 +48,8 @@ $breakpoints: (
   'medium-large': 992px,
   'large': 1248px,
   'x-large': 1440px
+);
+
+$z-index: (
+  'main': 0
 );

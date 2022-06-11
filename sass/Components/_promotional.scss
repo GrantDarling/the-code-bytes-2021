@@ -14,17 +14,20 @@
   &__button {
     @include box(50%, 48px);
     font-size: 20px;
-    border: solid 1px $grey-dust;
-    box-shadow: 3px 1px 8px $white-mercury;
-
-    &:hover {
-      border: solid 1px $CB-ACCENT;
-    }
 
     button {
       @include box(100%);
       border: none;
+      &:hover {
+        cursor: pointer;
+      }
     }
+  }
+}
+
+@include media('medium') {
+  .promotions {
+    margin-top: 0;
   }
 }
 
@@ -107,12 +110,8 @@
 
 @include media('medium') {
   .newsletter {
-    width: 50%;
     position: sticky;
+    width: 50%;
     top: 125px;
-  }
-
-  .promotions {
-    margin-top: 0;
   }
 }
