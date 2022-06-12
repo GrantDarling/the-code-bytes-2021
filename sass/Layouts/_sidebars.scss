@@ -186,6 +186,11 @@
   width: 100%;
 }
 
+.banner,
+.banner .newsletter {
+  width: 100%;
+}
+
 @include media('large') {
   #sidebar-3 {
     max-width: 700px;

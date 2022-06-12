@@ -401,6 +401,26 @@ main {
   width: 100%;
 }
 
+<<<<<<< HEAD
+=======
+p {
+  font-family: "PT Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+}
+
+>>>>>>> fe463cfdb704fe00ef25c19614e0b48efecc4e50
 body {
   background-color: #1d1d1d;
 }
@@ -478,6 +498,18 @@ table th {
   height: 100vh;
 }
 
+<<<<<<< HEAD
+=======
+.float-box {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px #efeeee;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+>>>>>>> fe463cfdb704fe00ef25c19614e0b48efecc4e50
 .page-header,
 .page-title {
   font-size: 20px;
@@ -1219,12 +1251,15 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 @media only screen and (min-width: 767px) {
   .promotions {
     margin-top: 0;
   }
 }
 
+=======
+>>>>>>> fe463cfdb704fe00ef25c19614e0b48efecc4e50
 .newsletter {
   display: flex;
   justify-content: center;
@@ -1320,6 +1355,44 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
 /****************
     COMMENTS
 ****************/
+<<<<<<< HEAD
+=======
+#comments {
+  max-width: 900px;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+#comments article {
+  border: solid 1px #343434;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+#comments ol.comment-list {
+  padding: 0;
+}
+
+#comments ol li {
+  list-style-type: none;
+}
+
+#comments a {
+  color: #f89e86;
+}
+
+#comments textarea {
+  overflow: auto;
+  width: 90%;
+  margin: auto;
+}
+
+#comments p label {
+  width: 100%;
+  display: block;
+}
+
+>>>>>>> fe463cfdb704fe00ef25c19614e0b48efecc4e50
 /****************
     CATEGORIES
 ****************/
@@ -1455,6 +1528,13 @@ a button, a .button, a .newsletter form .tnp-submit, .newsletter form a .tnp-sub
     display: block;
     width: 100%;
   }
+}
+
+.sidebar-ad-2 img {
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 /* Pages */
