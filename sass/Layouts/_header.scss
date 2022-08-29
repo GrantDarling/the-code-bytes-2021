@@ -45,7 +45,6 @@
   ul {
     list-style: none;
     margin: 0;
-    height: 100%;
 
     ul {
       @include position(relative, 100% null null -999em);
@@ -121,6 +120,7 @@
 }
 
 .nav-menu {
+  justify-content: left;
   a {
     color: $CB-BLACK;
   }
@@ -223,20 +223,25 @@ header {
 // Toggled Navigation
 .main-navigation.toggled {
   @include position(fixed, 0 0 0 0);
-  @include box(100%, 100vh);
+  width: 100%;
   background: $white;
   z-index: 999999;
+
+  & > * {
+    margin-top: 40px;
+  }
 
   &,
   ul {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   ul li {
     margin: 0;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     width: 100%;
     display: block;
   }
@@ -280,9 +285,10 @@ header {
     }
   }
 
-  a {
+  a:not(.category-article-anchor) {
     width: 100%;
-    text-align: center;
+    text-align: left;
+    margin-left: 34px;
   }
 
   #search-form {
@@ -290,19 +296,19 @@ header {
     justify-content: center;
     order: -1;
     width: 100%;
-    margin: 0;
+    margin: 40px 0 0 0;
   }
 
   .menu-main-nav-container {
-    @include box(100%, 50%);
-    margin-bottom: 40%;
+    width: 100%;
+    flex-grow: 1;
   }
 }
 
 // Navigation Header Container
 .navigation-header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background: $HEADER__bg-color;
   box-shadow: 5px -1px 13px $HEADER__shadow;
@@ -408,6 +414,12 @@ header {
 
   .header-shim {
     height: 140px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header img {
+    display: none !important;
   }
 }
 

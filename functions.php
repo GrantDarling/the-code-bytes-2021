@@ -242,3 +242,32 @@ function getArticlesByTag($tagName, $postsPerPage, $articleType) {
 }
 add_action('wp_enqueue_scripts','deregister_media_elements');
 
+function get_all_articles_by_category( ) {
+	
+	$all_categories = get_categories( array(
+			'orderby' => 'name',
+			'order'   => 'ASC'
+	) );
+ 
+	foreach( $all_categories as $category ) {
+		$get_category_posts = new WP_Query( array(
+						'category_name'  => $category->slug,
+						'posts_per_page' => -1
+				)  );
+ 
+		if ( $get_category_posts->have_posts() && $category->slug != 'archive' ) {
+				echo '<div class="category-dropdown-inner-container">';
+					echo '<h2 class="category-title">'. esc_html($category->name) .'</h2>';
+						echo '<div class="category-article-anchor-container">';
+							while ( $get_category_posts->have_posts() ) {
+									$get_category_posts->the_post();
+									echo'<a href="'. get_permalink() .'" class="category-article-anchor"><p>' . get_the_title() . '</p></a>';
+							}
+						echo '</div>';
+				echo '</div>';
+		} 
+
+		wp_reset_postdata();
+	} 
+}
+

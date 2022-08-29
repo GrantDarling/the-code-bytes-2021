@@ -15,6 +15,7 @@
 get_header();
 ?>
 	<main id="primary" class="site-main">
+
 		<!-- Landing Banner -->
 		<div class="landing__banner">
 			<div class="landing__tagline">Keeping Code Cool <span>Since 2020.</span></div>

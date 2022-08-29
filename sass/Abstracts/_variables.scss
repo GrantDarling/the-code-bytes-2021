@@ -5,6 +5,7 @@
 // Colors
 $white: #ffffff;
 $white-alabaster: #fafafa;
+$white-eggshell: #cdcdcd;
 $white-mercury: #e3e3e3;
 $grey-dust: #9b9999;
 $grey-cod: #1d1d1d;
@@ -51,5 +52,7 @@ $breakpoints: (
 );
 
 $z-index: (
-  'main': 0
+  'main': 0,
+  'category-dropdown-mobile': 1,
+  'category-dropdown-desktop': -1
 );

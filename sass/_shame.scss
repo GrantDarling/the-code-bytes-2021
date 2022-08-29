@@ -2,10 +2,6 @@
      SHAME
 ****************/
 
-.category__body {
-  font-size: 26px;
-}
-
 .wp-block-group,
 .wp-block-group__inner-container {
   height: 100%;
@@ -15,26 +11,12 @@
   height: calc(100% - 39px);
 }
 
-iframe#\$iradid {
-  position: sticky;
-  top: 160px;
-}
-
 .sidebar .promotions .newsletter {
   top: 340px;
 }
+
 #sidebar-3 .banner .newsletter {
   border: none;
-}
-
-@media only screen and (min-width: 992px) {
-  .landing__banner {
-    height: 40px;
-  }
-
-  #sidebar-3 .banner {
-    height: 100%;
-  }
 }
 
 .banner,
@@ -42,27 +24,11 @@ iframe#\$iradid {
   height: 100%;
 }
 
-#sidebar-3 {
-  height: 110px;
-  border: none;
-}
-
-.article article img {
-  width: auto;
-  margin: auto;
-  max-height: 500px;
-  max-width: 100%;
-  display: block;
-}
-
 .wp-post-image {
   width: 100% !important;
 }
 
 @media screen and (max-width: 600px) {
-  header img {
-    display: none !important;
-  }
   #sidebar-3 .banner .newsletter header {
     max-width: unset;
   }

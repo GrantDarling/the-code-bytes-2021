@@ -13,6 +13,7 @@
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 40px;
+  border: none;
 
   & > p {
     padding: 0; // remove unwanted auto generated <p> tag heights
@@ -60,6 +61,10 @@
       }
     }
   }
+}
+
+#sidebar-3 {
+  height: 110px;
 }
 
 @include media('medium') {
@@ -228,4 +233,19 @@
 iframe#\$iradid {
   position: relative !important;
   top: 0 !important;
+}
+
+iframe#\$iradid {
+  position: sticky;
+  top: 160px;
+}
+
+@media only screen and (min-width: 992px) {
+  .landing__banner {
+    height: 40px;
+  }
+
+  #sidebar-3 .banner {
+    height: 100%;
+  }
 }

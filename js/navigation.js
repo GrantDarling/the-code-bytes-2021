@@ -37,6 +37,7 @@
 
     if (button.getAttribute('aria-expanded') === 'true') {
       button.setAttribute('aria-expanded', 'false');
+      categoryPageContainer.classList.add('hidden');
     } else {
       button.setAttribute('aria-expanded', 'true');
     }
@@ -98,4 +99,23 @@
       menuItem.classList.toggle('focus');
     }
   }
+
+  /*
+   * Attach category page markup to category nav link
+   * */
+
+  const categoryLink = document.querySelector('#menu-item-2573 a');
+  const categoryPageContainer = document.createElement('div');
+  categoryPageContainer.className = 'hidden category-dropdown-container';
+  categoryLink.appendChild(categoryPageContainer);
+  categoryPageContainer.insertAdjacentHTML(
+    'beforeend',
+    get_all_articles_by_category
+  );
+
+  function toggleHiddenClass() {
+    categoryPageContainer.classList.toggle('hidden');
+  }
+
+  categoryLink.addEventListener('click', toggleHiddenClass);
 })();
