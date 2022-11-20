@@ -29,8 +29,10 @@
         max-width: 160px;
         border: none;
 
-        img {
-          width: 100%;
+        @include media('small-medium') {
+          img {
+            width: 100%;
+          }
         }
       }
 

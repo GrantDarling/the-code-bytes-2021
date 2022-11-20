@@ -1,0 +1,47 @@
+/****************
+   AUTHOR BIO
+****************/
+
+.author-bio {
+  @include flex-align(center, center);
+  flex-wrap: wrap;
+  padding: 10px 50px;
+  margin: auto auto 50px auto;
+
+  @include media('medium') {
+    @include box(85%, auto);
+    justify-content: left;
+  }
+
+  img {
+    @include box(175px);
+    @include media('medium') {
+      @include box(18%, auto);
+    }
+
+    border-radius: 100%;
+    margin-right: 40px;
+  }
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    color: $CB-ACCENT-2;
+  }
+
+  .article__author-date-divider {
+    margin: 7px 0 0 13px;
+  }
+
+  .content {
+    @include media('medium') {
+      width: 70%;
+    }
+  }
+}

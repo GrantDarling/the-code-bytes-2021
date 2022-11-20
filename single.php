@@ -15,7 +15,8 @@
 		<?php dynamic_sidebar( 'sidebar-2' ); ?>
 		<div class="single__article">
 			<?php get_template_part( 'template-parts/content-single', get_post_type() ); ?>
-			<div class="single__navigation">
+				<div class="single__navigation">
+				<?php get_template_part( 'template-parts/author-bio' ); ?>
 				<?php the_post_navigation(
 					array(
 						'prev_text' => '<span class="single__navigation--previous">' . esc_html__( 'Previous Article:', 'the-code-bytes-2021' ) . '</span> <span class="title">%title</span>',

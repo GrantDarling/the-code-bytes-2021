@@ -7,7 +7,7 @@ const browseButton = document.querySelectorAll('.articles__browse-more');
 
 const loadMoreArticles = (event) => {
   const articles = document.querySelectorAll(
-    '.categories__article:nth-child(n+4)'
+    '.categories__article:nth-child(n+5)'
   );
 
   const filteredArticles = Array.prototype.slice

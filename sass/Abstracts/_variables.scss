@@ -7,6 +7,7 @@ $white: #ffffff;
 $white-alabaster: #fafafa;
 $white-eggshell: #cdcdcd;
 $white-mercury: #e3e3e3;
+$white-float: #efeeee;
 $grey-dust: #9b9999;
 $grey-cod: #1d1d1d;
 $black-mine-shaft: #343434;
@@ -14,10 +15,12 @@ $black: black;
 
 $orange-geraldine: #f89e86;
 $success-green: #59c371;
+$zomp-blue: #3aab89;
 
 // Primary Colors
 $CB-BLACK: $black-mine-shaft;
 $CB-ACCENT: $orange-geraldine;
+$CB-ACCENT-2: $zomp-blue;
 
 // Based
 $body-color: $grey-cod;
@@ -35,7 +38,7 @@ $normal: 400;
 
 // Header
 $HEADER__bg-color: $white-alabaster;
-$HEADER__shadow: #d3d2d2;
+$HEADER__shadow: #e7e6e6;
 $HEADER__menu-height: 75px;
 $HEADER__mobile-menu-top: 180px;
 $HEADER__mobile-menu-open: $HEADER__mobile-menu-top + $HEADER__menu-height;

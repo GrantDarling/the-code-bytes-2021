@@ -20,6 +20,8 @@
 @import 'Layouts/footer';
 
 /* Components */
+@import 'Components/author-bio';
+@import 'Components/badge';
 @import 'Components/buttons';
 @import 'Components/promotional';
 @import 'Components/comments';
@@ -29,6 +31,7 @@
 @import 'Components/_review';
 
 /* Pages */
+@import 'Pages/_archive';
 @import 'Pages/_home';
 @import 'Pages/_single';
 @import 'Pages/_about';

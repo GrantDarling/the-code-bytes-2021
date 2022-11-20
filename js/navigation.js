@@ -39,7 +39,7 @@
       button.setAttribute('aria-expanded', 'false');
       categoryPageContainer.classList.add('hidden');
     } else {
-      button.setAttribute('aria-expanded', 'true');
+      // button.setAttribute('aria-expanded', 'true');
     }
   });
 
@@ -105,7 +105,7 @@
    * */
 
   const categoryLink = document.querySelector('#menu-item-2573 a');
-  const categoryPageContainer = document.createElement('div');
+  const categoryPageContainer = true || document.createElement('div'); // set true to hide the page container
   categoryPageContainer.className = 'hidden category-dropdown-container';
   categoryLink.appendChild(categoryPageContainer);
   categoryPageContainer.insertAdjacentHTML(

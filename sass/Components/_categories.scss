@@ -2,27 +2,49 @@
     CATEGORIES
 ****************/
 
-.categories__blog {
-  @include flex-center();
-}
+$radius: 12px;
 
+/* Articles */
 .categories__article {
   @include flex-center();
-  @include box(100%, 250px);
-  @include margin(25px 25px 50px 25px);
+  @include box(100%, 100%);
+  max-height: 650px;
   position: relative;
-  color: $white;
   font-family: $primary-font;
-  font-weight: $bold;
-  border-radius: 4px;
-  box-shadow: 5px -1px 6px $HEADER__shadow;
+  border-radius: $radius;
+  box-shadow: 0 8px 20px $HEADER__shadow;
+  max-width: unset;
+  width: 100%;
+  @include media('medium') {
+    max-width: 48%;
+  }
+  min-width: 315px;
 
   &:hover {
-    box-shadow: none;
+    transition: color 0.4s ease;
 
-    .category__body {
-      border: $CB-ACCENT solid 4px;
+    .article__author-info,
+    .category__excerpt,
+    .category__date {
+      color: $black;
     }
+  }
+
+  .category {
+    @include box(100%);
+    height: 500px;
+    border-radius: $radius;
+  }
+
+  .category__img {
+    @include box(100%, 35%);
+    max-height: 200px;
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+  }
+
+  .category__title {
+    width: 80%;
   }
 
   .category__body {
@@ -34,20 +56,70 @@
     padding: 0 1em;
   }
 
-  .category__footer {
+  .article__author-info,
+  .category__title,
+  .category__excerpt {
+    margin: 25px;
+    box-sizing: border-box;
+  }
+
+  .category__date {
     @include position(absolute, null 0 0 0);
     @include flex-center();
     @include box(100%, 35px);
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(0, 0, 0, 0.6012780112044818) 45%
-    );
+    background: $CB-ACCENT;
     font-family: $accent-font;
     font-size: 12px;
     border-top: solid 1px #ffffff40;
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
   }
 }
+
+#featured-article {
+  margin-top: 0 !important;
+  width: 100%;
+
+  .categories__featured-article {
+    @extend .categories__article;
+
+    max-width: unset !important;
+    width: 100% !important;
+
+    .category__img {
+      height: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .featured-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: 30px;
+
+    & > *:not(.badge) {
+      width: 100%;
+      justify-content: left;
+      padding-bottom: 20px;
+    }
+  }
+
+  .category__title {
+    margin: 0 !important;
+  }
+
+  .categories__featured-article:hover {
+    .article__author-date-container {
+      color: $black;
+    }
+  }
+}
+
+/* Archive Page */
 
 @include media('medium') {
   .category__all-posts {

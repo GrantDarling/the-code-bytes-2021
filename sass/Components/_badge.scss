@@ -1,0 +1,27 @@
+/****************
+      BADGE
+****************/
+
+.badge {
+  padding: 5px 15px;
+  margin-bottom: 10px;
+  background-color: $CB-ACCENT;
+  color: $white;
+  border-radius: 30px;
+}
+
+.category.badge {
+  background: $white;
+  color: $CB-ACCENT-2;
+  border: solid 1px $grey-dust;
+  width: fit-content;
+  white-space: nowrap;
+  margin: 0 10px;
+
+  &.active,
+  &:hover {
+    background: $CB-ACCENT;
+    border: solid 1px $CB-ACCENT;
+    color: $white;
+  }
+}

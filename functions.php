@@ -217,17 +217,104 @@ function getArticlesByTag($tagName, $postsPerPage, $articleType) {
 			while ( $the_query->have_posts() ){
 				$the_query->the_post();
 				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+				// linear-gradient(0deg, rgb(255 148 137 / 50%) 0%, rgb(252 129 116) 100%)
 
-				echo '<a class="categories__article" data-article=' . $articleType . ' href="' . get_permalink() . '"><div class="category__body" style="background: linear-gradient(158deg, rgb(14 14 14 / 71%) 0%, rgb(0 0 0) 100%),  url( ' . $featured_img_url . ') center center no-repeat;width: 100%; height: 100%;text-align: center;display: flex;
-    justify-content: center;
-    align-items: center;">' . get_the_title() . '</div><div class="category__footer">' . get_the_date() . '</div></a>';
+				echo '<a class="categories__article" data-article=' . $articleType . ' href="' . get_permalink() . '">
+									<div class="category">
+										<div class="category__img" style="background: url( '.$featured_img_url.') center / cover no-repeat;"></div>
+										<div class="article__author-info">	
+											<div class="article__author-date-container">
+												'.get_the_author().'
+												<div class="article__author-date-divider"></div>
+												'.get_the_modified_date().'
+											</div>
+										</div>
+										<h2 class="category__title">'.get_the_title().'</h2>
+										<div class="category__excerpt">'.get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true).'</div>
+										<div class="category__date">'.get_the_modified_date().'</div>
+										
+									</div>
+							</a>';
 			}
-		}
-
 	}
+}
+
+function getArticlesByCategory($categoryID, $postsPerPage, $articleType) {
+		$args = array(
+			'posts_per_page'  => $postsPerPage,
+			'post_status' => 'publish',
+			'cat' => $categoryID,
+			'orderby' => 'meta_value_num',
+			'order' => 'DESC'
+		);
+		$the_query = new WP_Query($args); 
+
+		//the loop
+		if($the_query->have_posts()) {
+			while ( $the_query->have_posts() ){
+				$the_query->the_post();
+				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+				// linear-gradient(0deg, rgb(255 148 137 / 50%) 0%, rgb(252 129 116) 100%)
+
+				echo '<a class="categories__article" data-article=' . $articleType . ' href="' . get_permalink() . '">
+									<div class="category">
+										<div class="category__img" style="background: url( '.$featured_img_url.') center / cover no-repeat;"></div>
+										<div class="article__author-info">	
+											<div class="article__author-date-container">
+												'.get_the_author().'
+												<div class="article__author-date-divider"></div>
+												'.get_the_modified_date().'
+											</div>
+										</div>
+										<h2 class="category__title">'.get_the_title().'</h2>
+										<div class="category__excerpt">'.get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true).'</div>
+										<div class="category__date">'.get_the_modified_date().'</div>
+										
+									</div>
+							</a>';
+			}
+	}
+}
+
+
+function getFeaturedArticle() {
+		$args = array(
+			'posts_per_page'  => 1,
+			'post_status' => 'publish',
+			'tag_slug__in' => 'featured',
+			'orderby' => 'meta_value_num',
+			'order' => 'DESC'
+		);
+		$the_query = new WP_Query($args); 
+
+		//the loop
+		if($the_query->have_posts()) {
+			while ( $the_query->have_posts() ){
+				$the_query->the_post();
+				$featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'full');
+
+				echo '<a class="categories__featured-article" data-article="featured" href="' . get_permalink() . '">
+									<div class="category">
+										<div class="category__img" style="background: url( '.$featured_img_url.') center / cover no-repeat;">
+											<div class="featured-container">
+												<div class="badge">Featured</div>
+												<h2 class="category__title">'.get_the_title().'</h2>
+												<div class="article__author-date-container">
+													'.get_the_author().'
+													<div class="article__author-date-divider"></div>
+													'.get_the_modified_date().'
+												</div>
+											</div>
+										</div>
+									</div>
+							</a>';
+			}
+	}
+}
 
 /**
  * Generic Newsletter 
+ * 
  */
 
  function newsletter() {
@@ -261,7 +348,7 @@ function get_all_articles_by_category( ) {
 						echo '<div class="category-article-anchor-container">';
 							while ( $get_category_posts->have_posts() ) {
 									$get_category_posts->the_post();
-									echo'<a href="'. get_permalink() .'" class="category-article-anchor"><p>' . get_the_title() . '</p></a>';
+									echo'<a href="'. get_permalink() .'?utm_source=categories" class="category-article-anchor"><p>' . get_the_title() . '</p></a>';
 							}
 						echo '</div>';
 				echo '</div>';

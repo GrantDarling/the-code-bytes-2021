@@ -80,6 +80,26 @@ table {
   }
 }
 
+.display-flex {
+  display: flex;
+}
+
+.display-flex-center {
+  @include flex-center();
+}
+
+.text-align-center {
+  text-align: center !important;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.height-100 {
+  height: 100%;
+}
+
 #page {
   background: $white;
 }
@@ -98,6 +118,13 @@ table {
   width: 100%;
   box-sizing: border-box;
   padding: 0 20px;
+}
+
+.float-container {
+  background: $white;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px $white-float;
+  padding: 40px;
 }
 
 @include media('medium') {

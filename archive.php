@@ -10,33 +10,34 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
-		<?php if ( have_posts() ) : ?>
-			<header class="page-header">
-				<?php
-					'<h1 class="page-title>' . single_term_title() . '</h1>';
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header>
-			<section class="category__all-posts">
-					<?php
-						while ( have_posts() ) :
-							the_post();
-							get_template_part( 'template-parts/content', get_post_type() );
-						endwhile;
 
-				echo 
-				'<div class="navigation">'. 
-					'<button>'.
-						the_posts_navigation().
-					'</button>'. 
-				'</div>';
+	<main id="primary" class="site-main archive">
+		<div class="container">
+			<div class="categories-container">
+			<?php 
+				$archive_id = get_query_var('cat');
+				$categories = get_categories();
+				foreach($categories as $category) {
+					$active = ($category->term_id == $archive_id) ?  ('active') : ('');
+					$is_active = ($category->term_id == $archive_id);
+					if($is_active) { $active_cat = $category->term_id; };
 
-				else :
-					get_template_part( 'template-parts/content', 'none' );
-				endif;
-				?>	
-			</section>
+					echo '<a href="' . get_category_link($category->term_id) . '">
+									<div class="category badge '.$active.'">'.$category->name.'</div>
+								</a>';
+				}
+			?>
+			</div>
+			<div class="display-flex-center height-100">
+				<div class="articles-container">
+					<?php getArticlesByCategory($active_cat,  30, "category"); ?>
+				</div>
+				<!-- Promotions Sidebar -->
+				<div class="promotions">
+					<?php get_sidebar(); ?>
+				</div>
+			</div>
+		</div>
 	</main>
 
 <?php
