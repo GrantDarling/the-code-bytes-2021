@@ -63,21 +63,6 @@
   }
 }
 
-.articles-promotions {
-  max-width: $max-width;
-  padding: 70px 30px;
-  height: 100%;
-  h1 {
-    text-align: center;
-  }
-
-  .sidebar,
-  #sidebar-1 {
-    max-width: unset;
-    width: 66%;
-  }
-}
-
 .articles__buttons {
   @include flex-center();
   width: 100%;
@@ -94,21 +79,10 @@
   height: 100%;
 }
 
-.articles-promotions {
-  display: flex;
-  flex-wrap: nowrap;
-
-  h1 {
-    width: 100%;
-    font-size: 25px;
-    text-align: left;
-  }
-
-  .promotions {
-    @include flex-center();
-    align-items: flex-start;
-    margin-top: 70px;
-  }
+.articles-promotions h1 {
+  width: 100%;
+  font-size: 25px;
+  text-align: left;
 }
 
 .categories__article {
